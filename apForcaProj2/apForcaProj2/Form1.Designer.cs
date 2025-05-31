@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForca));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCadastro = new System.Windows.Forms.TabPage();
@@ -53,30 +54,38 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.tabForca = new System.Windows.Forms.TabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pbForca2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbForca4 = new System.Windows.Forms.PictureBox();
-            this.pbForca1 = new System.Windows.Forms.PictureBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pbForca3 = new System.Windows.Forms.PictureBox();
-            this.lblForca = new System.Windows.Forms.Label();
-            this.lblAdivinhe = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnQ = new System.Windows.Forms.Button();
-            this.btnW = new System.Windows.Forms.Button();
-            this.btnE = new System.Windows.Forms.Button();
-            this.btnR = new System.Windows.Forms.Button();
-            this.btnT = new System.Windows.Forms.Button();
-            this.btnY = new System.Windows.Forms.Button();
-            this.btnU = new System.Windows.Forms.Button();
-            this.btnI = new System.Windows.Forms.Button();
-            this.btnO = new System.Windows.Forms.Button();
-            this.btnP = new System.Windows.Forms.Button();
+            this.txtTempoRestante = new System.Windows.Forms.TextBox();
+            this.pbForca_2_07 = new System.Windows.Forms.PictureBox();
+            this.pbForca_2_04 = new System.Windows.Forms.PictureBox();
+            this.pbForca_2_03 = new System.Windows.Forms.PictureBox();
+            this.pbEnforcado = new System.Windows.Forms.PictureBox();
+            this.pbForca_14 = new System.Windows.Forms.PictureBox();
+            this.pbForca_16 = new System.Windows.Forms.PictureBox();
+            this.pbForca_17 = new System.Windows.Forms.PictureBox();
+            this.pbForca_1_05 = new System.Windows.Forms.PictureBox();
+            this.pbForca_05 = new System.Windows.Forms.PictureBox();
+            this.pbForca_08 = new System.Windows.Forms.PictureBox();
+            this.pbForca_09 = new System.Windows.Forms.PictureBox();
+            this.pbForca_07 = new System.Windows.Forms.PictureBox();
+            this.pbForca_10 = new System.Windows.Forms.PictureBox();
+            this.rbComDica = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIniciarJogo = new System.Windows.Forms.Button();
+            this.txtErros = new System.Windows.Forms.TextBox();
+            this.txtPontos = new System.Windows.Forms.TextBox();
+            this.txtDicaExibida = new System.Windows.Forms.TextBox();
+            this.lblTempoRestante = new System.Windows.Forms.Label();
+            this.lblErros = new System.Windows.Forms.Label();
+            this.lblPontos = new System.Windows.Forms.Label();
+            this.lblDicaForca = new System.Windows.Forms.Label();
+            this.dgvPalavraForca = new System.Windows.Forms.DataGridView();
+            this.btnM = new System.Windows.Forms.Button();
+            this.btnN = new System.Windows.Forms.Button();
+            this.btnB = new System.Windows.Forms.Button();
+            this.btnV = new System.Windows.Forms.Button();
+            this.btnC = new System.Windows.Forms.Button();
+            this.btnX = new System.Windows.Forms.Button();
+            this.btnZ = new System.Windows.Forms.Button();
             this.btnÇ = new System.Windows.Forms.Button();
             this.btnL = new System.Windows.Forms.Button();
             this.btnK = new System.Windows.Forms.Button();
@@ -87,43 +96,51 @@
             this.btnD = new System.Windows.Forms.Button();
             this.btnS = new System.Windows.Forms.Button();
             this.btnA = new System.Windows.Forms.Button();
-            this.btnM = new System.Windows.Forms.Button();
-            this.btnN = new System.Windows.Forms.Button();
-            this.btnB = new System.Windows.Forms.Button();
-            this.btnV = new System.Windows.Forms.Button();
-            this.btnC = new System.Windows.Forms.Button();
-            this.btnX = new System.Windows.Forms.Button();
-            this.btnZ = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblDicaForca = new System.Windows.Forms.Label();
-            this.lblPontos = new System.Windows.Forms.Label();
-            this.lblErros = new System.Windows.Forms.Label();
-            this.lblTempoRestante = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnIniciarJogo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rbComDica = new System.Windows.Forms.RadioButton();
-            this.pbForca_10 = new System.Windows.Forms.PictureBox();
-            this.pbForca_07 = new System.Windows.Forms.PictureBox();
-            this.pbForca_09 = new System.Windows.Forms.PictureBox();
-            this.pbForca_08 = new System.Windows.Forms.PictureBox();
-            this.pbForca_05 = new System.Windows.Forms.PictureBox();
-            this.pbForca_1_05 = new System.Windows.Forms.PictureBox();
-            this.pbForca_17 = new System.Windows.Forms.PictureBox();
-            this.pbForca_16 = new System.Windows.Forms.PictureBox();
-            this.pbForca_14 = new System.Windows.Forms.PictureBox();
-            this.pbEnforcado = new System.Windows.Forms.PictureBox();
-            this.pbForca_2_03 = new System.Windows.Forms.PictureBox();
-            this.pbForca_2_04 = new System.Windows.Forms.PictureBox();
-            this.pbForca_2_07 = new System.Windows.Forms.PictureBox();
+            this.btnP = new System.Windows.Forms.Button();
+            this.btnO = new System.Windows.Forms.Button();
+            this.btnI = new System.Windows.Forms.Button();
+            this.btnU = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
+            this.btnT = new System.Windows.Forms.Button();
+            this.btnR = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
+            this.btnW = new System.Windows.Forms.Button();
+            this.btnQ = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblAdivinhe = new System.Windows.Forms.Label();
+            this.lblForca = new System.Windows.Forms.Label();
+            this.pbForca3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbForca2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbForca4 = new System.Windows.Forms.PictureBox();
+            this.pbForca1 = new System.Windows.Forms.PictureBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
+            this.timerTempoRestante = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDicionario)).BeginInit();
             this.tsCadastro.SuspendLayout();
             this.tabForca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_07)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEnforcado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_1_05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_08)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_09)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_07)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavraForca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca2)).BeginInit();
@@ -131,21 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbForca4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca1)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_07)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_09)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_08)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_05)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_1_05)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnforcado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_03)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_04)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_07)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -279,7 +281,7 @@
             this.btnProximo.Image = ((System.Drawing.Image)(resources.GetObject("btnProximo.Image")));
             this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(56, 35);
+            this.btnProximo.Size = new System.Drawing.Size(55, 35);
             this.btnProximo.Text = "Próximo";
             this.btnProximo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
@@ -349,7 +351,7 @@
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(46, 35);
+            this.btnExcluir.Size = new System.Drawing.Size(45, 35);
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -371,6 +373,7 @@
             // 
             // tabForca
             // 
+            this.tabForca.Controls.Add(this.txtTempoRestante);
             this.tabForca.Controls.Add(this.pbForca_2_07);
             this.tabForca.Controls.Add(this.pbForca_2_04);
             this.tabForca.Controls.Add(this.pbForca_2_03);
@@ -387,15 +390,14 @@
             this.tabForca.Controls.Add(this.rbComDica);
             this.tabForca.Controls.Add(this.label1);
             this.tabForca.Controls.Add(this.btnIniciarJogo);
-            this.tabForca.Controls.Add(this.textBox5);
-            this.tabForca.Controls.Add(this.textBox4);
-            this.tabForca.Controls.Add(this.textBox3);
-            this.tabForca.Controls.Add(this.textBox2);
+            this.tabForca.Controls.Add(this.txtErros);
+            this.tabForca.Controls.Add(this.txtPontos);
+            this.tabForca.Controls.Add(this.txtDicaExibida);
             this.tabForca.Controls.Add(this.lblTempoRestante);
             this.tabForca.Controls.Add(this.lblErros);
             this.tabForca.Controls.Add(this.lblPontos);
             this.tabForca.Controls.Add(this.lblDicaForca);
-            this.tabForca.Controls.Add(this.dataGridView1);
+            this.tabForca.Controls.Add(this.dgvPalavraForca);
             this.tabForca.Controls.Add(this.btnM);
             this.tabForca.Controls.Add(this.btnN);
             this.tabForca.Controls.Add(this.btnB);
@@ -443,221 +445,320 @@
             this.tabForca.Text = "Forca";
             this.tabForca.UseVisualStyleBackColor = true;
             // 
-            // pictureBox6
+            // txtTempoRestante
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(123, 150);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 19);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
+            this.txtTempoRestante.ForeColor = System.Drawing.Color.Red;
+            this.txtTempoRestante.Location = new System.Drawing.Point(782, 360);
+            this.txtTempoRestante.Name = "txtTempoRestante";
+            this.txtTempoRestante.Size = new System.Drawing.Size(46, 23);
+            this.txtTempoRestante.TabIndex = 64;
             // 
-            // pictureBox5
+            // pbForca_2_07
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(123, 45);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(83, 96);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.pbForca_2_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_07.Image")));
+            this.pbForca_2_07.Location = new System.Drawing.Point(69, 140);
+            this.pbForca_2_07.Name = "pbForca_2_07";
+            this.pbForca_2_07.Size = new System.Drawing.Size(57, 40);
+            this.pbForca_2_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_2_07.TabIndex = 63;
+            this.pbForca_2_07.TabStop = false;
+            this.pbForca_2_07.Visible = false;
             // 
-            // pbForca2
+            // pbForca_2_04
             // 
-            this.pbForca2.Image = ((System.Drawing.Image)(resources.GetObject("pbForca2.Image")));
-            this.pbForca2.Location = new System.Drawing.Point(0, 55);
-            this.pbForca2.Name = "pbForca2";
-            this.pbForca2.Size = new System.Drawing.Size(100, 194);
-            this.pbForca2.TabIndex = 3;
-            this.pbForca2.TabStop = false;
+            this.pbForca_2_04.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_04.Image")));
+            this.pbForca_2_04.Location = new System.Drawing.Point(69, 47);
+            this.pbForca_2_04.Name = "pbForca_2_04";
+            this.pbForca_2_04.Size = new System.Drawing.Size(48, 94);
+            this.pbForca_2_04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_2_04.TabIndex = 62;
+            this.pbForca_2_04.TabStop = false;
+            this.pbForca_2_04.Visible = false;
             // 
-            // pictureBox3
+            // pbForca_2_03
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(123, 136);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(83, 33);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.pbForca_2_03.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_03.Image")));
+            this.pbForca_2_03.Location = new System.Drawing.Point(0, 50);
+            this.pbForca_2_03.Name = "pbForca_2_03";
+            this.pbForca_2_03.Size = new System.Drawing.Size(69, 91);
+            this.pbForca_2_03.TabIndex = 61;
+            this.pbForca_2_03.TabStop = false;
+            this.pbForca_2_03.Visible = false;
             // 
-            // pbForca4
+            // pbEnforcado
             // 
-            this.pbForca4.Image = ((System.Drawing.Image)(resources.GetObject("pbForca4.Image")));
-            this.pbForca4.Location = new System.Drawing.Point(123, 2);
-            this.pbForca4.Name = "pbForca4";
-            this.pbForca4.Size = new System.Drawing.Size(100, 50);
-            this.pbForca4.TabIndex = 1;
-            this.pbForca4.TabStop = false;
+            this.pbEnforcado.Image = ((System.Drawing.Image)(resources.GetObject("pbEnforcado.Image")));
+            this.pbEnforcado.Location = new System.Drawing.Point(299, 42);
+            this.pbEnforcado.Name = "pbEnforcado";
+            this.pbEnforcado.Size = new System.Drawing.Size(169, 337);
+            this.pbEnforcado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbEnforcado.TabIndex = 60;
+            this.pbEnforcado.TabStop = false;
+            this.pbEnforcado.Visible = false;
             // 
-            // pbForca1
+            // pbForca_14
             // 
-            this.pbForca1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbForca1.Image = ((System.Drawing.Image)(resources.GetObject("pbForca1.Image")));
-            this.pbForca1.Location = new System.Drawing.Point(2, 2);
-            this.pbForca1.Name = "pbForca1";
-            this.pbForca1.Size = new System.Drawing.Size(878, 454);
-            this.pbForca1.TabIndex = 0;
-            this.pbForca1.TabStop = false;
+            this.pbForca_14.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_14.Image")));
+            this.pbForca_14.Location = new System.Drawing.Point(123, 227);
+            this.pbForca_14.Name = "pbForca_14";
+            this.pbForca_14.Size = new System.Drawing.Size(63, 50);
+            this.pbForca_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_14.TabIndex = 59;
+            this.pbForca_14.TabStop = false;
+            this.pbForca_14.Visible = false;
             // 
-            // statusStrip1
+            // pbForca_16
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.slRegistro});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 499);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(910, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.pbForca_16.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_16.Image")));
+            this.pbForca_16.Location = new System.Drawing.Point(90, 274);
+            this.pbForca_16.Name = "pbForca_16";
+            this.pbForca_16.Size = new System.Drawing.Size(68, 91);
+            this.pbForca_16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_16.TabIndex = 58;
+            this.pbForca_16.TabStop = false;
+            this.pbForca_16.Visible = false;
             // 
-            // toolStripStatusLabel1
+            // pbForca_17
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
-            this.toolStripStatusLabel1.Text = "Mensagem:";
+            this.pbForca_17.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_17.Image")));
+            this.pbForca_17.Location = new System.Drawing.Point(157, 274);
+            this.pbForca_17.Name = "pbForca_17";
+            this.pbForca_17.Size = new System.Drawing.Size(58, 91);
+            this.pbForca_17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_17.TabIndex = 57;
+            this.pbForca_17.TabStop = false;
+            this.pbForca_17.Visible = false;
             // 
-            // slRegistro
+            // pbForca_1_05
             // 
-            this.slRegistro.Name = "slRegistro";
-            this.slRegistro.Size = new System.Drawing.Size(70, 17);
-            this.slRegistro.Text = "Registro:0/0";
+            this.pbForca_1_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_1_05.Image")));
+            this.pbForca_1_05.Location = new System.Drawing.Point(116, 58);
+            this.pbForca_1_05.Name = "pbForca_1_05";
+            this.pbForca_1_05.Size = new System.Drawing.Size(101, 94);
+            this.pbForca_1_05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_1_05.TabIndex = 56;
+            this.pbForca_1_05.TabStop = false;
+            this.pbForca_1_05.Visible = false;
             // 
-            // pbForca3
+            // pbForca_05
             // 
-            this.pbForca3.Image = ((System.Drawing.Image)(resources.GetObject("pbForca3.Image")));
-            this.pbForca3.Location = new System.Drawing.Point(0, 242);
-            this.pbForca3.Name = "pbForca3";
-            this.pbForca3.Size = new System.Drawing.Size(100, 188);
-            this.pbForca3.TabIndex = 6;
-            this.pbForca3.TabStop = false;
+            this.pbForca_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_05.Image")));
+            this.pbForca_05.Location = new System.Drawing.Point(116, 58);
+            this.pbForca_05.Name = "pbForca_05";
+            this.pbForca_05.Size = new System.Drawing.Size(124, 94);
+            this.pbForca_05.TabIndex = 55;
+            this.pbForca_05.TabStop = false;
+            this.pbForca_05.Visible = false;
             // 
-            // lblForca
+            // pbForca_08
             // 
-            this.lblForca.AutoSize = true;
-            this.lblForca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForca.ForeColor = System.Drawing.Color.Blue;
-            this.lblForca.Location = new System.Drawing.Point(624, 11);
-            this.lblForca.Name = "lblForca";
-            this.lblForca.Size = new System.Drawing.Size(92, 31);
-            this.lblForca.TabIndex = 7;
-            this.lblForca.Text = "Forca!";
+            this.pbForca_08.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_08.Image")));
+            this.pbForca_08.Location = new System.Drawing.Point(123, 147);
+            this.pbForca_08.Name = "pbForca_08";
+            this.pbForca_08.Size = new System.Drawing.Size(92, 16);
+            this.pbForca_08.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_08.TabIndex = 54;
+            this.pbForca_08.TabStop = false;
+            this.pbForca_08.Visible = false;
             // 
-            // lblAdivinhe
+            // pbForca_09
             // 
-            this.lblAdivinhe.AutoSize = true;
-            this.lblAdivinhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdivinhe.ForeColor = System.Drawing.Color.Blue;
-            this.lblAdivinhe.Location = new System.Drawing.Point(580, 42);
-            this.lblAdivinhe.Name = "lblAdivinhe";
-            this.lblAdivinhe.Size = new System.Drawing.Size(169, 24);
-            this.lblAdivinhe.TabIndex = 8;
-            this.lblAdivinhe.Text = "Adivinhe a palavra!";
+            this.pbForca_09.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_09.Image")));
+            this.pbForca_09.Location = new System.Drawing.Point(123, 158);
+            this.pbForca_09.Name = "pbForca_09";
+            this.pbForca_09.Size = new System.Drawing.Size(63, 82);
+            this.pbForca_09.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_09.TabIndex = 53;
+            this.pbForca_09.TabStop = false;
+            this.pbForca_09.Visible = false;
             // 
-            // lblNome
+            // pbForca_07
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(493, 98);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(76, 17);
-            this.lblNome.TabIndex = 9;
-            this.lblNome.Text = "Seu nome:";
+            this.pbForca_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_07.Image")));
+            this.pbForca_07.Location = new System.Drawing.Point(69, 140);
+            this.pbForca_07.Name = "pbForca_07";
+            this.pbForca_07.Size = new System.Drawing.Size(57, 40);
+            this.pbForca_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_07.TabIndex = 52;
+            this.pbForca_07.TabStop = false;
+            this.pbForca_07.Visible = false;
             // 
-            // textBox1
+            // pbForca_10
             // 
-            this.textBox1.Location = new System.Drawing.Point(584, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 23);
-            this.textBox1.TabIndex = 10;
+            this.pbForca_10.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_10.Image")));
+            this.pbForca_10.Location = new System.Drawing.Point(184, 158);
+            this.pbForca_10.Name = "pbForca_10";
+            this.pbForca_10.Size = new System.Drawing.Size(68, 58);
+            this.pbForca_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbForca_10.TabIndex = 51;
+            this.pbForca_10.TabStop = false;
+            this.pbForca_10.Visible = false;
             // 
-            // btnQ
+            // rbComDica
             // 
-            this.btnQ.Location = new System.Drawing.Point(548, 140);
-            this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(31, 23);
-            this.btnQ.TabIndex = 11;
-            this.btnQ.Text = "Q";
-            this.btnQ.UseVisualStyleBackColor = true;
+            this.rbComDica.AutoSize = true;
+            this.rbComDica.Location = new System.Drawing.Point(675, 324);
+            this.rbComDica.Name = "rbComDica";
+            this.rbComDica.Size = new System.Drawing.Size(92, 21);
+            this.rbComDica.TabIndex = 50;
+            this.rbComDica.TabStop = true;
+            this.rbComDica.Text = "Com dica?";
+            this.rbComDica.UseVisualStyleBackColor = true;
             // 
-            // btnW
+            // label1
             // 
-            this.btnW.Location = new System.Drawing.Point(572, 140);
-            this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(31, 23);
-            this.btnW.TabIndex = 12;
-            this.btnW.Text = "W";
-            this.btnW.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(834, 366);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "s";
             // 
-            // btnE
+            // btnIniciarJogo
             // 
-            this.btnE.Location = new System.Drawing.Point(596, 140);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(31, 23);
-            this.btnE.TabIndex = 13;
-            this.btnE.Text = "E";
-            this.btnE.UseVisualStyleBackColor = true;
+            this.btnIniciarJogo.Location = new System.Drawing.Point(496, 392);
+            this.btnIniciarJogo.Name = "btnIniciarJogo";
+            this.btnIniciarJogo.Size = new System.Drawing.Size(363, 47);
+            this.btnIniciarJogo.TabIndex = 48;
+            this.btnIniciarJogo.Text = "INICIAR";
+            this.btnIniciarJogo.UseVisualStyleBackColor = true;
+            this.btnIniciarJogo.Click += new System.EventHandler(this.btnIniciarJogo_Click);
             // 
-            // btnR
+            // txtErros
             // 
-            this.btnR.Location = new System.Drawing.Point(623, 140);
-            this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(31, 23);
-            this.btnR.TabIndex = 14;
-            this.btnR.Text = "R";
-            this.btnR.UseVisualStyleBackColor = true;
+            this.txtErros.ForeColor = System.Drawing.Color.Red;
+            this.txtErros.Location = new System.Drawing.Point(545, 363);
+            this.txtErros.Name = "txtErros";
+            this.txtErros.Size = new System.Drawing.Size(51, 23);
+            this.txtErros.TabIndex = 47;
             // 
-            // btnT
+            // txtPontos
             // 
-            this.btnT.Location = new System.Drawing.Point(648, 140);
-            this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(31, 23);
-            this.btnT.TabIndex = 15;
-            this.btnT.Text = "T";
-            this.btnT.UseVisualStyleBackColor = true;
+            this.txtPontos.ForeColor = System.Drawing.Color.Green;
+            this.txtPontos.Location = new System.Drawing.Point(545, 325);
+            this.txtPontos.Name = "txtPontos";
+            this.txtPontos.Size = new System.Drawing.Size(51, 23);
+            this.txtPontos.TabIndex = 45;
             // 
-            // btnY
+            // txtDicaExibida
             // 
-            this.btnY.Location = new System.Drawing.Point(675, 140);
-            this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(31, 23);
-            this.btnY.TabIndex = 16;
-            this.btnY.Text = "Y";
-            this.btnY.UseVisualStyleBackColor = true;
+            this.txtDicaExibida.ForeColor = System.Drawing.Color.Purple;
+            this.txtDicaExibida.Location = new System.Drawing.Point(546, 296);
+            this.txtDicaExibida.Name = "txtDicaExibida";
+            this.txtDicaExibida.Size = new System.Drawing.Size(313, 23);
+            this.txtDicaExibida.TabIndex = 44;
             // 
-            // btnU
+            // lblTempoRestante
             // 
-            this.btnU.Location = new System.Drawing.Point(703, 140);
-            this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(31, 23);
-            this.btnU.TabIndex = 17;
-            this.btnU.Text = "U";
-            this.btnU.UseVisualStyleBackColor = true;
+            this.lblTempoRestante.AutoSize = true;
+            this.lblTempoRestante.ForeColor = System.Drawing.Color.Red;
+            this.lblTempoRestante.Location = new System.Drawing.Point(672, 363);
+            this.lblTempoRestante.Name = "lblTempoRestante";
+            this.lblTempoRestante.Size = new System.Drawing.Size(112, 17);
+            this.lblTempoRestante.TabIndex = 43;
+            this.lblTempoRestante.Text = "Tempo restante:";
             // 
-            // btnI
+            // lblErros
             // 
-            this.btnI.Location = new System.Drawing.Point(730, 140);
-            this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(31, 23);
-            this.btnI.TabIndex = 18;
-            this.btnI.Text = "I";
-            this.btnI.UseVisualStyleBackColor = true;
+            this.lblErros.AutoSize = true;
+            this.lblErros.ForeColor = System.Drawing.Color.Red;
+            this.lblErros.Location = new System.Drawing.Point(494, 363);
+            this.lblErros.Name = "lblErros";
+            this.lblErros.Size = new System.Drawing.Size(46, 17);
+            this.lblErros.TabIndex = 41;
+            this.lblErros.Text = "Erros:";
             // 
-            // btnO
+            // lblPontos
             // 
-            this.btnO.Location = new System.Drawing.Point(758, 140);
-            this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(31, 23);
-            this.btnO.TabIndex = 19;
-            this.btnO.Text = "O";
-            this.btnO.UseVisualStyleBackColor = true;
+            this.lblPontos.AutoSize = true;
+            this.lblPontos.ForeColor = System.Drawing.Color.Green;
+            this.lblPontos.Location = new System.Drawing.Point(493, 328);
+            this.lblPontos.Name = "lblPontos";
+            this.lblPontos.Size = new System.Drawing.Size(56, 17);
+            this.lblPontos.TabIndex = 40;
+            this.lblPontos.Text = "Pontos:";
             // 
-            // btnP
+            // lblDicaForca
             // 
-            this.btnP.Location = new System.Drawing.Point(782, 140);
-            this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(31, 23);
-            this.btnP.TabIndex = 20;
-            this.btnP.Text = "P";
-            this.btnP.UseVisualStyleBackColor = true;
+            this.lblDicaForca.AutoSize = true;
+            this.lblDicaForca.ForeColor = System.Drawing.Color.Purple;
+            this.lblDicaForca.Location = new System.Drawing.Point(494, 299);
+            this.lblDicaForca.Name = "lblDicaForca";
+            this.lblDicaForca.Size = new System.Drawing.Size(40, 17);
+            this.lblDicaForca.TabIndex = 39;
+            this.lblDicaForca.Text = "Dica:";
+            // 
+            // dgvPalavraForca
+            // 
+            this.dgvPalavraForca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPalavraForca.Location = new System.Drawing.Point(496, 227);
+            this.dgvPalavraForca.Name = "dgvPalavraForca";
+            this.dgvPalavraForca.Size = new System.Drawing.Size(363, 63);
+            this.dgvPalavraForca.TabIndex = 38;
+            // 
+            // btnM
+            // 
+            this.btnM.Location = new System.Drawing.Point(739, 198);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(31, 23);
+            this.btnM.TabIndex = 37;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = true;
+            // 
+            // btnN
+            // 
+            this.btnN.Location = new System.Drawing.Point(711, 198);
+            this.btnN.Name = "btnN";
+            this.btnN.Size = new System.Drawing.Size(31, 23);
+            this.btnN.TabIndex = 36;
+            this.btnN.Text = "N";
+            this.btnN.UseVisualStyleBackColor = true;
+            // 
+            // btnB
+            // 
+            this.btnB.Location = new System.Drawing.Point(684, 198);
+            this.btnB.Name = "btnB";
+            this.btnB.Size = new System.Drawing.Size(31, 23);
+            this.btnB.TabIndex = 35;
+            this.btnB.Text = "B";
+            this.btnB.UseVisualStyleBackColor = true;
+            // 
+            // btnV
+            // 
+            this.btnV.Location = new System.Drawing.Point(659, 198);
+            this.btnV.Name = "btnV";
+            this.btnV.Size = new System.Drawing.Size(31, 23);
+            this.btnV.TabIndex = 34;
+            this.btnV.Text = "V";
+            this.btnV.UseVisualStyleBackColor = true;
+            // 
+            // btnC
+            // 
+            this.btnC.Location = new System.Drawing.Point(632, 198);
+            this.btnC.Name = "btnC";
+            this.btnC.Size = new System.Drawing.Size(31, 23);
+            this.btnC.TabIndex = 33;
+            this.btnC.Text = "C";
+            this.btnC.UseVisualStyleBackColor = true;
+            // 
+            // btnX
+            // 
+            this.btnX.Location = new System.Drawing.Point(608, 198);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(31, 23);
+            this.btnX.TabIndex = 32;
+            this.btnX.Text = "X";
+            this.btnX.UseVisualStyleBackColor = true;
+            // 
+            // btnZ
+            // 
+            this.btnZ.Location = new System.Drawing.Point(584, 198);
+            this.btnZ.Name = "btnZ";
+            this.btnZ.Size = new System.Drawing.Size(31, 23);
+            this.btnZ.TabIndex = 31;
+            this.btnZ.Text = "Z";
+            this.btnZ.UseVisualStyleBackColor = true;
             // 
             // btnÇ
             // 
@@ -749,319 +850,225 @@
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = true;
             // 
-            // btnM
+            // btnP
             // 
-            this.btnM.Location = new System.Drawing.Point(739, 198);
-            this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(31, 23);
-            this.btnM.TabIndex = 37;
-            this.btnM.Text = "M";
-            this.btnM.UseVisualStyleBackColor = true;
+            this.btnP.Location = new System.Drawing.Point(782, 140);
+            this.btnP.Name = "btnP";
+            this.btnP.Size = new System.Drawing.Size(31, 23);
+            this.btnP.TabIndex = 20;
+            this.btnP.Text = "P";
+            this.btnP.UseVisualStyleBackColor = true;
             // 
-            // btnN
+            // btnO
             // 
-            this.btnN.Location = new System.Drawing.Point(711, 198);
-            this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(31, 23);
-            this.btnN.TabIndex = 36;
-            this.btnN.Text = "N";
-            this.btnN.UseVisualStyleBackColor = true;
+            this.btnO.Location = new System.Drawing.Point(758, 140);
+            this.btnO.Name = "btnO";
+            this.btnO.Size = new System.Drawing.Size(31, 23);
+            this.btnO.TabIndex = 19;
+            this.btnO.Text = "O";
+            this.btnO.UseVisualStyleBackColor = true;
             // 
-            // btnB
+            // btnI
             // 
-            this.btnB.Location = new System.Drawing.Point(684, 198);
-            this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(31, 23);
-            this.btnB.TabIndex = 35;
-            this.btnB.Text = "B";
-            this.btnB.UseVisualStyleBackColor = true;
+            this.btnI.Location = new System.Drawing.Point(730, 140);
+            this.btnI.Name = "btnI";
+            this.btnI.Size = new System.Drawing.Size(31, 23);
+            this.btnI.TabIndex = 18;
+            this.btnI.Text = "I";
+            this.btnI.UseVisualStyleBackColor = true;
             // 
-            // btnV
+            // btnU
             // 
-            this.btnV.Location = new System.Drawing.Point(659, 198);
-            this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(31, 23);
-            this.btnV.TabIndex = 34;
-            this.btnV.Text = "V";
-            this.btnV.UseVisualStyleBackColor = true;
+            this.btnU.Location = new System.Drawing.Point(703, 140);
+            this.btnU.Name = "btnU";
+            this.btnU.Size = new System.Drawing.Size(31, 23);
+            this.btnU.TabIndex = 17;
+            this.btnU.Text = "U";
+            this.btnU.UseVisualStyleBackColor = true;
             // 
-            // btnC
+            // btnY
             // 
-            this.btnC.Location = new System.Drawing.Point(632, 198);
-            this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(31, 23);
-            this.btnC.TabIndex = 33;
-            this.btnC.Text = "C";
-            this.btnC.UseVisualStyleBackColor = true;
+            this.btnY.Location = new System.Drawing.Point(675, 140);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(31, 23);
+            this.btnY.TabIndex = 16;
+            this.btnY.Text = "Y";
+            this.btnY.UseVisualStyleBackColor = true;
             // 
-            // btnX
+            // btnT
             // 
-            this.btnX.Location = new System.Drawing.Point(608, 198);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(31, 23);
-            this.btnX.TabIndex = 32;
-            this.btnX.Text = "X";
-            this.btnX.UseVisualStyleBackColor = true;
+            this.btnT.Location = new System.Drawing.Point(648, 140);
+            this.btnT.Name = "btnT";
+            this.btnT.Size = new System.Drawing.Size(31, 23);
+            this.btnT.TabIndex = 15;
+            this.btnT.Text = "T";
+            this.btnT.UseVisualStyleBackColor = true;
             // 
-            // btnZ
+            // btnR
             // 
-            this.btnZ.Location = new System.Drawing.Point(584, 198);
-            this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(31, 23);
-            this.btnZ.TabIndex = 31;
-            this.btnZ.Text = "Z";
-            this.btnZ.UseVisualStyleBackColor = true;
+            this.btnR.Location = new System.Drawing.Point(623, 140);
+            this.btnR.Name = "btnR";
+            this.btnR.Size = new System.Drawing.Size(31, 23);
+            this.btnR.TabIndex = 14;
+            this.btnR.Text = "R";
+            this.btnR.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnE
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(496, 242);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(363, 35);
-            this.dataGridView1.TabIndex = 38;
+            this.btnE.Location = new System.Drawing.Point(596, 140);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(31, 23);
+            this.btnE.TabIndex = 13;
+            this.btnE.Text = "E";
+            this.btnE.UseVisualStyleBackColor = true;
             // 
-            // lblDicaForca
+            // btnW
             // 
-            this.lblDicaForca.AutoSize = true;
-            this.lblDicaForca.ForeColor = System.Drawing.Color.Purple;
-            this.lblDicaForca.Location = new System.Drawing.Point(494, 299);
-            this.lblDicaForca.Name = "lblDicaForca";
-            this.lblDicaForca.Size = new System.Drawing.Size(40, 17);
-            this.lblDicaForca.TabIndex = 39;
-            this.lblDicaForca.Text = "Dica:";
+            this.btnW.Location = new System.Drawing.Point(572, 140);
+            this.btnW.Name = "btnW";
+            this.btnW.Size = new System.Drawing.Size(31, 23);
+            this.btnW.TabIndex = 12;
+            this.btnW.Text = "W";
+            this.btnW.UseVisualStyleBackColor = true;
             // 
-            // lblPontos
+            // btnQ
             // 
-            this.lblPontos.AutoSize = true;
-            this.lblPontos.ForeColor = System.Drawing.Color.Green;
-            this.lblPontos.Location = new System.Drawing.Point(493, 328);
-            this.lblPontos.Name = "lblPontos";
-            this.lblPontos.Size = new System.Drawing.Size(56, 17);
-            this.lblPontos.TabIndex = 40;
-            this.lblPontos.Text = "Pontos:";
+            this.btnQ.Location = new System.Drawing.Point(548, 140);
+            this.btnQ.Name = "btnQ";
+            this.btnQ.Size = new System.Drawing.Size(31, 23);
+            this.btnQ.TabIndex = 11;
+            this.btnQ.Text = "Q";
+            this.btnQ.UseVisualStyleBackColor = true;
             // 
-            // lblErros
+            // textBox1
             // 
-            this.lblErros.AutoSize = true;
-            this.lblErros.ForeColor = System.Drawing.Color.Red;
-            this.lblErros.Location = new System.Drawing.Point(494, 363);
-            this.lblErros.Name = "lblErros";
-            this.lblErros.Size = new System.Drawing.Size(46, 17);
-            this.lblErros.TabIndex = 41;
-            this.lblErros.Text = "Erros:";
+            this.textBox1.Location = new System.Drawing.Point(584, 98);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(265, 23);
+            this.textBox1.TabIndex = 10;
             // 
-            // lblTempoRestante
+            // lblNome
             // 
-            this.lblTempoRestante.AutoSize = true;
-            this.lblTempoRestante.ForeColor = System.Drawing.Color.Red;
-            this.lblTempoRestante.Location = new System.Drawing.Point(672, 363);
-            this.lblTempoRestante.Name = "lblTempoRestante";
-            this.lblTempoRestante.Size = new System.Drawing.Size(112, 17);
-            this.lblTempoRestante.TabIndex = 43;
-            this.lblTempoRestante.Text = "Tempo restante:";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(493, 98);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(76, 17);
+            this.lblNome.TabIndex = 9;
+            this.lblNome.Text = "Seu nome:";
             // 
-            // textBox2
+            // lblAdivinhe
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Purple;
-            this.textBox2.Location = new System.Drawing.Point(546, 296);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 23);
-            this.textBox2.TabIndex = 44;
+            this.lblAdivinhe.AutoSize = true;
+            this.lblAdivinhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdivinhe.ForeColor = System.Drawing.Color.Blue;
+            this.lblAdivinhe.Location = new System.Drawing.Point(580, 42);
+            this.lblAdivinhe.Name = "lblAdivinhe";
+            this.lblAdivinhe.Size = new System.Drawing.Size(169, 24);
+            this.lblAdivinhe.TabIndex = 8;
+            this.lblAdivinhe.Text = "Adivinhe a palavra!";
             // 
-            // textBox3
+            // lblForca
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Green;
-            this.textBox3.Location = new System.Drawing.Point(545, 325);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(51, 23);
-            this.textBox3.TabIndex = 45;
+            this.lblForca.AutoSize = true;
+            this.lblForca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForca.ForeColor = System.Drawing.Color.Blue;
+            this.lblForca.Location = new System.Drawing.Point(624, 11);
+            this.lblForca.Name = "lblForca";
+            this.lblForca.Size = new System.Drawing.Size(92, 31);
+            this.lblForca.TabIndex = 7;
+            this.lblForca.Text = "Forca!";
             // 
-            // textBox4
+            // pbForca3
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.Red;
-            this.textBox4.Location = new System.Drawing.Point(782, 360);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(46, 23);
-            this.textBox4.TabIndex = 46;
+            this.pbForca3.Image = ((System.Drawing.Image)(resources.GetObject("pbForca3.Image")));
+            this.pbForca3.Location = new System.Drawing.Point(0, 242);
+            this.pbForca3.Name = "pbForca3";
+            this.pbForca3.Size = new System.Drawing.Size(100, 188);
+            this.pbForca3.TabIndex = 6;
+            this.pbForca3.TabStop = false;
             // 
-            // textBox5
+            // pictureBox6
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.Red;
-            this.textBox5.Location = new System.Drawing.Point(545, 363);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(51, 23);
-            this.textBox5.TabIndex = 47;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(123, 150);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 19);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
             // 
-            // btnIniciarJogo
+            // pictureBox5
             // 
-            this.btnIniciarJogo.Location = new System.Drawing.Point(496, 392);
-            this.btnIniciarJogo.Name = "btnIniciarJogo";
-            this.btnIniciarJogo.Size = new System.Drawing.Size(363, 47);
-            this.btnIniciarJogo.TabIndex = 48;
-            this.btnIniciarJogo.Text = "INICIAR";
-            this.btnIniciarJogo.UseVisualStyleBackColor = true;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(123, 45);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(83, 96);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
             // 
-            // label1
+            // pbForca2
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(834, 366);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "s";
+            this.pbForca2.Image = ((System.Drawing.Image)(resources.GetObject("pbForca2.Image")));
+            this.pbForca2.Location = new System.Drawing.Point(0, 55);
+            this.pbForca2.Name = "pbForca2";
+            this.pbForca2.Size = new System.Drawing.Size(100, 194);
+            this.pbForca2.TabIndex = 3;
+            this.pbForca2.TabStop = false;
             // 
-            // rbComDica
+            // pictureBox3
             // 
-            this.rbComDica.AutoSize = true;
-            this.rbComDica.Location = new System.Drawing.Point(675, 324);
-            this.rbComDica.Name = "rbComDica";
-            this.rbComDica.Size = new System.Drawing.Size(92, 21);
-            this.rbComDica.TabIndex = 50;
-            this.rbComDica.TabStop = true;
-            this.rbComDica.Text = "Com dica?";
-            this.rbComDica.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(123, 136);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(83, 33);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
-            // pbForca_10
+            // pbForca4
             // 
-            this.pbForca_10.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_10.Image")));
-            this.pbForca_10.Location = new System.Drawing.Point(184, 158);
-            this.pbForca_10.Name = "pbForca_10";
-            this.pbForca_10.Size = new System.Drawing.Size(68, 58);
-            this.pbForca_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_10.TabIndex = 51;
-            this.pbForca_10.TabStop = false;
-            this.pbForca_10.Visible = false;
+            this.pbForca4.Image = ((System.Drawing.Image)(resources.GetObject("pbForca4.Image")));
+            this.pbForca4.Location = new System.Drawing.Point(123, 2);
+            this.pbForca4.Name = "pbForca4";
+            this.pbForca4.Size = new System.Drawing.Size(100, 50);
+            this.pbForca4.TabIndex = 1;
+            this.pbForca4.TabStop = false;
             // 
-            // pbForca_07
+            // pbForca1
             // 
-            this.pbForca_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_07.Image")));
-            this.pbForca_07.Location = new System.Drawing.Point(69, 140);
-            this.pbForca_07.Name = "pbForca_07";
-            this.pbForca_07.Size = new System.Drawing.Size(57, 40);
-            this.pbForca_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_07.TabIndex = 52;
-            this.pbForca_07.TabStop = false;
-            this.pbForca_07.Visible = false;
+            this.pbForca1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbForca1.Image = ((System.Drawing.Image)(resources.GetObject("pbForca1.Image")));
+            this.pbForca1.Location = new System.Drawing.Point(2, 2);
+            this.pbForca1.Name = "pbForca1";
+            this.pbForca1.Size = new System.Drawing.Size(878, 454);
+            this.pbForca1.TabIndex = 0;
+            this.pbForca1.TabStop = false;
             // 
-            // pbForca_09
+            // statusStrip1
             // 
-            this.pbForca_09.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_09.Image")));
-            this.pbForca_09.Location = new System.Drawing.Point(123, 158);
-            this.pbForca_09.Name = "pbForca_09";
-            this.pbForca_09.Size = new System.Drawing.Size(63, 82);
-            this.pbForca_09.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_09.TabIndex = 53;
-            this.pbForca_09.TabStop = false;
-            this.pbForca_09.Visible = false;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.slRegistro});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 499);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(910, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
             // 
-            // pbForca_08
+            // toolStripStatusLabel1
             // 
-            this.pbForca_08.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_08.Image")));
-            this.pbForca_08.Location = new System.Drawing.Point(123, 147);
-            this.pbForca_08.Name = "pbForca_08";
-            this.pbForca_08.Size = new System.Drawing.Size(92, 16);
-            this.pbForca_08.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_08.TabIndex = 54;
-            this.pbForca_08.TabStop = false;
-            this.pbForca_08.Visible = false;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
+            this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
-            // pbForca_05
+            // slRegistro
             // 
-            this.pbForca_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_05.Image")));
-            this.pbForca_05.Location = new System.Drawing.Point(116, 58);
-            this.pbForca_05.Name = "pbForca_05";
-            this.pbForca_05.Size = new System.Drawing.Size(124, 94);
-            this.pbForca_05.TabIndex = 55;
-            this.pbForca_05.TabStop = false;
-            this.pbForca_05.Visible = false;
+            this.slRegistro.Name = "slRegistro";
+            this.slRegistro.Size = new System.Drawing.Size(70, 17);
+            this.slRegistro.Text = "Registro:0/0";
             // 
-            // pbForca_1_05
+            // timerTempoRestante
             // 
-            this.pbForca_1_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_1_05.Image")));
-            this.pbForca_1_05.Location = new System.Drawing.Point(116, 58);
-            this.pbForca_1_05.Name = "pbForca_1_05";
-            this.pbForca_1_05.Size = new System.Drawing.Size(101, 94);
-            this.pbForca_1_05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_1_05.TabIndex = 56;
-            this.pbForca_1_05.TabStop = false;
-            this.pbForca_1_05.Visible = false;
-            // 
-            // pbForca_17
-            // 
-            this.pbForca_17.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_17.Image")));
-            this.pbForca_17.Location = new System.Drawing.Point(157, 274);
-            this.pbForca_17.Name = "pbForca_17";
-            this.pbForca_17.Size = new System.Drawing.Size(58, 91);
-            this.pbForca_17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_17.TabIndex = 57;
-            this.pbForca_17.TabStop = false;
-            this.pbForca_17.Visible = false;
-            // 
-            // pbForca_16
-            // 
-            this.pbForca_16.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_16.Image")));
-            this.pbForca_16.Location = new System.Drawing.Point(90, 274);
-            this.pbForca_16.Name = "pbForca_16";
-            this.pbForca_16.Size = new System.Drawing.Size(68, 91);
-            this.pbForca_16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_16.TabIndex = 58;
-            this.pbForca_16.TabStop = false;
-            this.pbForca_16.Visible = false;
-            // 
-            // pbForca_14
-            // 
-            this.pbForca_14.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_14.Image")));
-            this.pbForca_14.Location = new System.Drawing.Point(123, 227);
-            this.pbForca_14.Name = "pbForca_14";
-            this.pbForca_14.Size = new System.Drawing.Size(63, 50);
-            this.pbForca_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_14.TabIndex = 59;
-            this.pbForca_14.TabStop = false;
-            this.pbForca_14.Visible = false;
-            // 
-            // pbEnforcado
-            // 
-            this.pbEnforcado.Image = ((System.Drawing.Image)(resources.GetObject("pbEnforcado.Image")));
-            this.pbEnforcado.Location = new System.Drawing.Point(299, 42);
-            this.pbEnforcado.Name = "pbEnforcado";
-            this.pbEnforcado.Size = new System.Drawing.Size(169, 337);
-            this.pbEnforcado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbEnforcado.TabIndex = 60;
-            this.pbEnforcado.TabStop = false;
-            this.pbEnforcado.Visible = false;
-            // 
-            // pbForca_2_03
-            // 
-            this.pbForca_2_03.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_03.Image")));
-            this.pbForca_2_03.Location = new System.Drawing.Point(0, 50);
-            this.pbForca_2_03.Name = "pbForca_2_03";
-            this.pbForca_2_03.Size = new System.Drawing.Size(69, 91);
-            this.pbForca_2_03.TabIndex = 61;
-            this.pbForca_2_03.TabStop = false;
-            this.pbForca_2_03.Visible = false;
-            // 
-            // pbForca_2_04
-            // 
-            this.pbForca_2_04.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_04.Image")));
-            this.pbForca_2_04.Location = new System.Drawing.Point(69, 47);
-            this.pbForca_2_04.Name = "pbForca_2_04";
-            this.pbForca_2_04.Size = new System.Drawing.Size(48, 94);
-            this.pbForca_2_04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_2_04.TabIndex = 62;
-            this.pbForca_2_04.TabStop = false;
-            this.pbForca_2_04.Visible = false;
-            // 
-            // pbForca_2_07
-            // 
-            this.pbForca_2_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_07.Image")));
-            this.pbForca_2_07.Location = new System.Drawing.Point(69, 140);
-            this.pbForca_2_07.Name = "pbForca_2_07";
-            this.pbForca_2_07.Size = new System.Drawing.Size(57, 40);
-            this.pbForca_2_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pbForca_2_07.TabIndex = 63;
-            this.pbForca_2_07.TabStop = false;
-            this.pbForca_2_07.Visible = false;
+            this.timerTempoRestante.Tick += new System.EventHandler(this.timerTempoRestante_Tick);
             // 
             // FrmForca
             // 
@@ -1083,6 +1090,21 @@
             this.tsCadastro.PerformLayout();
             this.tabForca.ResumeLayout(false);
             this.tabForca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_07)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEnforcado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_1_05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_08)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_09)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_07)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPalavraForca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbForca3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbForca2)).EndInit();
@@ -1091,21 +1113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbForca1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_07)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_09)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_08)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_05)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_1_05)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEnforcado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_03)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_04)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbForca_2_07)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1182,12 +1189,11 @@
         private System.Windows.Forms.Label lblErros;
         private System.Windows.Forms.Label lblPontos;
         private System.Windows.Forms.Label lblDicaForca;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPalavraForca;
         private System.Windows.Forms.Button btnIniciarJogo;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtErros;
+        private System.Windows.Forms.TextBox txtPontos;
+        private System.Windows.Forms.TextBox txtDicaExibida;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbForca_05;
         private System.Windows.Forms.PictureBox pbForca_08;
@@ -1203,6 +1209,8 @@
         private System.Windows.Forms.PictureBox pbForca_2_04;
         private System.Windows.Forms.PictureBox pbForca_2_03;
         private System.Windows.Forms.PictureBox pbEnforcado;
+        private System.Windows.Forms.TextBox txtTempoRestante;
+        private System.Windows.Forms.Timer timerTempoRestante;
     }
 }
 

@@ -19,12 +19,17 @@ namespace apForcaProj2
 
         ListaDupla<Dicionario> listaDicionario;
         PrivateFontCollection fonteCurlz = new PrivateFontCollection();
+        int tempo;
+        private Random random = new Random(); // sorteador global
+        private Dicionario palavraSorteada;
 
         public FrmForca()
         {
             InitializeComponent();
             listaDicionario = new ListaDupla<Dicionario>();
             CarregarFonte();
+            timerTempoRestante.Interval = 1000; // define o intervalo do timer que exibe o Tempo Restante para 1000 milissegundos ==> 1 segundo
+
         }
 
         // método para utilização da fonte escolhida
@@ -40,6 +45,7 @@ namespace apForcaProj2
 
         }
 
+        // método para abrir o arquivo .txt contendo as palavras e dicas
         private void FazerLeitura()
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -68,11 +74,13 @@ namespace apForcaProj2
             }
         }
 
+        // método de configuração das ações do formulário ao ser iniciado 
         private void FrmForca_Load(object sender, EventArgs e)
         {
             // fazer a leitura do arquivo escolhido pelo usuário e armazená-lo na listaDicionario
             // posicionar o ponteiro atual no início da lista duplamente ligada
-            // Exibir o Registro Atual;
+            // chama ExibirRegistroAtual() para posicionar o ponteiro
+            // exibe os dados carregados no DataGridView
 
             FazerLeitura();
             listaDicionario.PosicionarNoInicio();
@@ -80,6 +88,7 @@ namespace apForcaProj2
             ExibirDadosNoDataGridView(listaDicionario, dgDicionario, Direcao.paraFrente);
         }
 
+        // método de para salvar o arquivo .txt ao fechar o formulário 
         private void FrmForca_FormClosing(object sender, FormClosingEventArgs e)
         {
             // salvar o arquivo
@@ -115,14 +124,16 @@ namespace apForcaProj2
                 MessageBox.Show("Nenhum registro selecionado para exibir.");
             }
         }
-
+        // ------------------------------------------ tabCadastro --------------------------------------------------------------
         private void ExibirDadosNoDataGridView(ListaDupla<Dicionario> aLista, DataGridView dgv, Direcao qualDirecao)
         {
+            // limpa os dados das linhas do DataGridView
+            // faz a listagem dos dados na lista na direção escolhida
+            // adiciona uma nova linha no DataGridView com os dados
             dgv.Rows.Clear();
             var dadosDaLista = aLista.Listagem(qualDirecao);
             foreach (Dicionario dicionario in dadosDaLista)
             {
-                // Adiciona uma nova linha no DataGridView com os dados
                 dgv.Rows.Add(dicionario.Palavra.Trim(), dicionario.Dica.Trim());
             }
         }
@@ -216,6 +227,84 @@ namespace apForcaProj2
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        // ---------------------------------------------------------------------------------------------------------------------
+
+        // --------------------------------------------- tabForca --------------------------------------------------------------
+
+
+        private void timerTempoRestante_Tick(object sender, EventArgs e)
+        {
+            tempo--;
+            txtTempoRestante.Text = tempo.ToString(); 
+
+            if (tempo <= 0)
+            {
+                timerTempoRestante.Stop();
+                MessageBox.Show("Tempo esgotado!");
+            }
+        }
+
+        private void btnIniciarJogo_Click(object sender, EventArgs e)
+        {
+            // verifica se a lista está vazia, se estiver, retorna e impossibilita o jogo
+            // oculta a aba de cadastro para o jogador não trapacear
+            // sorteia uma palavra a partir da listagem crescente do dicionario
+            // configura o DataGridView limpando linhas e colunas anteriores
+            // adiciona uma coluna para cada letra da palavra 
+            // adiciona linha com traços (_)
+            // se houver espaço ou hífen, mantém o caractere original
+            // inicia contagem do tempo e estipula para 90s
+
+            if (listaDicionario.EstaVazia)
+            {
+                MessageBox.Show("Não há palavras cadastradas!");
+                return;
+            }
+
+            tabControl1.TabPages.Remove(tabCadastro);
+
+            var lista = listaDicionario.Listagem(Direcao.paraFrente);
+            int indiceSorteado = random.Next(lista.Count);
+            palavraSorteada = lista[indiceSorteado];
+
+            dgvPalavraForca.Columns.Clear();
+            dgvPalavraForca.Rows.Clear();
+
+            int qtdeLetras = palavraSorteada.Palavra.Trim().Length;
+
+
+            for (int i = 0; i < qtdeLetras; i++)
+            {
+                var coluna = new DataGridViewTextBoxColumn();
+                coluna.Width = 35;
+                coluna.HeaderText = ""; // tira texto do cabeçalho
+                coluna.ReadOnly = true;
+                dgvPalavraForca.Columns.Add(coluna);
+            }
+
+            dgvPalavraForca.Rows.Add();
+            for (int i = 0; i < qtdeLetras; i++)
+            {
+                char letra = palavraSorteada.Palavra[i];
+                if (letra == ' ' || letra == '-')
+                    dgvPalavraForca.Rows[0].Cells[i].Value = letra;
+                else
+                    dgvPalavraForca.Rows[0].Cells[i].Value = "_";
+            }
+
+            // travar o dgv para ter só essa linha e sem cabeçalho de linha
+            dgvPalavraForca.RowHeadersVisible = false;
+            dgvPalavraForca.AllowUserToAddRows = false;
+            dgvPalavraForca.AllowUserToResizeColumns = false;
+
+            // ajustar altura da linha
+            dgvPalavraForca.RowTemplate.Height = 40;
+
+            tempo = 90;
+            timerTempoRestante.Start();
 
         }
     }
