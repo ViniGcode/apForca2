@@ -1,0 +1,11 @@
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\bin\Debug\apForcaProj2.exe.config
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\bin\Debug\apForcaProj2.exe
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\bin\Debug\apForcaProj2.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.csproj.AssemblyReference.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.FrmForca.resources
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.Properties.Resources.resources
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.csproj.GenerateResource.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.csproj.CoreCompileInputs.cache
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.exe
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\obj\Debug\apForcaProj2.pdb
+C:\Users\mathe\OneDrive\Área de Trabalho\git\estDados25\apForca2\apForcaProj2\apForcaProj2\bin\Debug\CURLZ__.TTF

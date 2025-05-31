@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    public class Dicionario : IComparable<Dicionario>
+    public class Dicionario : IComparable<Dicionario>, IRegistro
     {
         // atributos
         string palavra;
@@ -129,5 +129,10 @@ using System.Threading.Tasks;
         {
             return Palavra + " " + Dica;
         }
-    }
+
+        public string FormatoDeArquivo()
+        {
+            return $"{palavra}{dica}";
+        }
+}
 
