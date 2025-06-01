@@ -20,8 +20,17 @@ namespace apForcaProj2
         ListaDupla<Dicionario> listaDicionario;
         PrivateFontCollection fonteCurlz = new PrivateFontCollection();
         int tempo;
-        private Random random = new Random(); // sorteador global
+        private Random random = new Random(); // sorteador
         private Dicionario palavraSorteada;
+
+        // array para facilitar as atribuições de cada tag e dos clicks de cada btn
+        private string[] teclado = new string[] { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+                                                  "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ç",
+                                                  "Z", "X", "C", "V", "B", "N", "M" };
+
+        private int qtdErros = 0; // contagem de erros
+        private int qtdAcertos = 0; // contagem de acertos
+
 
         public FrmForca()
         {
@@ -81,11 +90,22 @@ namespace apForcaProj2
             // posicionar o ponteiro atual no início da lista duplamente ligada
             // chama ExibirRegistroAtual() para posicionar o ponteiro
             // exibe os dados carregados no DataGridView
+            // define as tags e eventos de clique dos botões do teclado a partir de um for que percorre o array teclado[]
 
             FazerLeitura();
             listaDicionario.PosicionarNoInicio();
             ExibirRegistroAtual();
             ExibirDadosNoDataGridView(listaDicionario, dgDicionario, Direcao.paraFrente);
+
+            for (int i = 0; i < teclado.Length; i++)
+            {
+                Button btn = this.Controls.Find("btn" + teclado[i], true).FirstOrDefault() as Button;
+                if (btn != null)
+                {
+                    btn.Tag = teclado[i];
+                    btn.Click += btnLetra_Click;
+                }
+            }
         }
 
         // método de para salvar o arquivo .txt ao fechar o formulário 
@@ -124,6 +144,7 @@ namespace apForcaProj2
                 MessageBox.Show("Nenhum registro selecionado para exibir.");
             }
         }
+
         // ------------------------------------------ tabCadastro --------------------------------------------------------------
         private void ExibirDadosNoDataGridView(ListaDupla<Dicionario> aLista, DataGridView dgv, Direcao qualDirecao)
         {
@@ -137,7 +158,6 @@ namespace apForcaProj2
                 dgv.Rows.Add(dicionario.Palavra.Trim(), dicionario.Dica.Trim());
             }
         }
-
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
@@ -234,7 +254,8 @@ namespace apForcaProj2
 
         // --------------------------------------------- tabForca --------------------------------------------------------------
 
-
+        // método de configuração do timer 
+        // exibe o tempo restante em txtTempoRestante 
         private void timerTempoRestante_Tick(object sender, EventArgs e)
         {
             tempo--;
@@ -244,6 +265,7 @@ namespace apForcaProj2
             {
                 timerTempoRestante.Stop();
                 MessageBox.Show("Tempo esgotado!");
+                tabControl1.TabPages.Add(tabCadastro);
             }
         }
 
@@ -256,6 +278,9 @@ namespace apForcaProj2
             // adiciona uma coluna para cada letra da palavra 
             // adiciona linha com traços (_)
             // se houver espaço ou hífen, mantém o caractere original
+            // habilita todos os botões com tag ==> os do teclado
+            // de modo que evita que continuem desabilitados devido a jogos anteriores
+            // limpa a dica exibida, a contagem de erros, acertos e desmarca o rbComDica
             // inicia contagem do tempo e estipula para 90s
 
             if (listaDicionario.EstaVazia)
@@ -303,9 +328,71 @@ namespace apForcaProj2
             // ajustar altura da linha
             dgvPalavraForca.RowTemplate.Height = 40;
 
+            foreach (Control ctrl in tabForca.Controls)
+            {
+                // percorre todos os botões do Form, mas pega só os que possui Tag
+                // verifica se o Tag possui somente uma letra, como forma de assegurar que atinge somente o teclado
+                // ativa todos de novo
+                if (ctrl is Button btn && btn.Tag != null && btn.Tag.ToString().Length == 1)
+                {
+                    btn.Enabled = true;
+                }
+            }
+
+            txtDicaExibida.Clear();
+            rbComDica.Checked = false;
+            txtErros.Clear();
+            txtPontos.Clear();
             tempo = 90;
             timerTempoRestante.Start();
+            qtdErros = 0;
+            qtdAcertos = 0;
+        }
 
+        private void rbComDica_CheckedChanged(object sender, EventArgs e)
+        {
+            // se o RadioButton for marcado e existir uma palavra sorteada
+            // exibe a dica dela no txtDicaExibida
+            // senão, limpa o txtDicaExibida
+
+            if (rbComDica.Checked)
+            {
+                if (palavraSorteada != null)
+                    txtDicaExibida.Text = palavraSorteada.Dica.Trim();
+                else
+                    txtDicaExibida.Text = "Nenhuma palavra sorteada.";
+            }
+            else
+            {
+                txtDicaExibida.Clear();
+            }
+        }
+
+        // método de clique dos botões do teclado da forca
+        private void btnLetra_Click(object sender, EventArgs e)
+        {
+            // obtém o botão clicado e a letra correspondente
+            // desativa o botão clicado para evitar clique repetido
+            // chama o método da palavra sorteada e atualiza o vetor de acertos e retorna se a letra existe
+            // se a letra foi encontrada, atualiza as posições do DataGridView baseadas no vetor de acertos
+            // se errou, incrementa o qtdErros e atualiza txtErros
+            // faz a contagem de acertos e atualiza txtPontos
+
+            Button btnClicado = sender as Button;
+            string letra = btnClicado.Tag.ToString();
+
+            btnClicado.Enabled = false;
+
+            bool letraEncontrada = false;
+
+            for (int i = 0; i < palavraSorteada.Palavra.Length; i++)
+            {
+                if (palavraSorteada.Palavra[i].ToString().ToUpper() == letra)
+                {
+                    dgvPalavraForca.Rows[0].Cells[i].Value = letra;
+                    letraEncontrada = true;
+                }
+            }
         }
     }
 }

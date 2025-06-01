@@ -604,6 +604,7 @@
             this.rbComDica.TabStop = true;
             this.rbComDica.Text = "Com dica?";
             this.rbComDica.UseVisualStyleBackColor = true;
+            this.rbComDica.CheckedChanged += new System.EventHandler(this.rbComDica_CheckedChanged);
             // 
             // label1
             // 
