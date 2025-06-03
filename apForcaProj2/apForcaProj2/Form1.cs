@@ -92,6 +92,7 @@ namespace apForcaProj2
             // chama ExibirRegistroAtual() para posicionar o ponteiro
             // exibe os dados carregados no DataGridView
             // define as tags e eventos de clique dos botões do teclado a partir de um for que percorre o array teclado[]
+            // desabilita o btnPararJogo --> estará disponível somente após o jogo iniciar 
 
             FazerLeitura();
             listaDicionario.PosicionarNoInicio();
@@ -111,6 +112,8 @@ namespace apForcaProj2
                     btn.Click += btnLetra_Click;
                 }
             }
+
+            btnPararJogo.Enabled = false;
 
         }
 
@@ -260,6 +263,34 @@ namespace apForcaProj2
 
         // --------------------------------------------- tabForca --------------------------------------------------------------
 
+        // função com finalidade de simplificar funções futuras
+        private void restaurarCenarioInicial()
+        {
+            // estrutura da forca
+            pbForca1.Visible = true;
+            pbForca2.Visible = true;
+            pbForca3.Visible = true;
+            pbForca4.Visible = true;
+            pbForca5.Visible = true;
+            pbForca6.Visible = true;
+            pbForca7.Visible = true;
+
+            // personagem
+            pbForca_05.Visible = false;
+            pbForca_08.Visible = false;
+            pbForca_09.Visible = false;
+            pbForca_10.Visible = false;
+            pbForca_14.Visible = false;
+            pbForca_16.Visible = false;
+            pbForca_17.Visible = false;
+            pbForca_2_03.Visible = false;
+            pbForca_2_04.Visible = false;
+            pbForca_2_07.Visible = false;
+            pbForca_07.Visible = false;
+            pbForca_1_05.Visible = false;
+            pbEnforcado.Visible = false;
+        }
+
         // método de configuração do timer 
         // exibe o tempo restante em txtTempoRestante 
         private void timerTempoRestante_Tick(object sender, EventArgs e)
@@ -354,6 +385,9 @@ namespace apForcaProj2
             timerTempoRestante.Start();
             qtdErros = 0;
             qtdAcertos = 0;
+            btnPararJogo.Enabled = true;
+
+            restaurarCenarioInicial();
         }
 
         private void rbComDica_CheckedChanged(object sender, EventArgs e)
@@ -414,11 +448,70 @@ namespace apForcaProj2
                             dgvPalavraForca.Rows[0].Cells[i].Value = letra;
                         }
                     }
+
+                    if (qtdAcertos == palavraSorteada.QuantidadeLetrasValidas())
+                    {
+                        // estrutura da forca
+                        pbForca1.Visible = false;
+                        pbForca2.Visible = false;
+                        pbForca3.Visible = false;
+                        pbForca4.Visible = false;
+                        pbForca5.Visible = false;
+                        pbForca6.Visible = false;
+                        pbForca7.Visible = false;
+
+                        // personagem 
+                        pbForca_05.Visible = true;
+                        pbForca_08.Visible = true;
+                        pbForca_09.Visible = true;
+                        pbForca_10.Visible = true;
+                        pbForca_14.Visible = true;
+                        pbForca_16.Visible = true;
+                        pbForca_17.Visible = true;
+                        pbForca_2_03.Visible = true;
+                        pbForca_2_04.Visible = true;
+                        pbForca_2_07.Visible = true;
+                        timerTempoRestante.Stop();
+                        tabControl1.TabPages.Add(tabCadastro);
+                        MessageBox.Show("Parabéns, você ganhou!");
+                    }
                 }
                 else
                 {
                     qtdErros++;
                     txtErros.Text = qtdErros.ToString();
+                    switch (qtdErros)
+                    {
+                        case 1:
+                            pbForca_05.Visible = true;
+                            pbForca_08.Visible = true;
+                            break;
+                        case 2:
+                            pbForca_09.Visible = true;
+                            break;
+                        case 3:
+                            pbForca_07.Visible = true;
+                            break;
+                        case 4:
+                            pbForca_10.Visible = true;
+                            break;
+                        case 5:
+                            pbForca_14.Visible = true;
+                            break;
+                        case 6:
+                            pbForca_16.Visible = true;
+                            break;
+                        case 7:
+                            pbForca_17.Visible = true;
+                            break;
+                        case 8:
+                            pbForca_05.Visible = false;
+                            pbForca_1_05.Visible = true;
+                            pbEnforcado.Visible = true;
+                            timerTempoRestante.Stop();
+                            MessageBox.Show("Você perdeu!");
+                            break;
+                    }
                 }
             }
         }
@@ -447,6 +540,14 @@ namespace apForcaProj2
                 aguardandoNome = false;
                 btnIniciarJogo.Enabled = true;
                 MessageBox.Show($"Bem-vindo, {txtSeuNome.Text.Trim()}! Agora você pode começar o jogo.");
+                // Desabilita todos os botões do teclado
+                foreach (Control ctrl in tabForca.Controls)
+                {
+                    if (ctrl is Button btn && btn.Tag != null && btn.Tag.ToString().Length == 1)
+                    {
+                        btn.Enabled = false;
+                    }
+                }
             }
         }
          // método para a barra de espaço (" ")
@@ -457,6 +558,59 @@ namespace apForcaProj2
             {
                 txtSeuNome.Text += " ";
             }
+        }
+
+        private void btnPararJogo_Click(object sender, EventArgs e)
+        {
+            // Para o cronômetro
+            timerTempoRestante.Stop();
+
+            // Limpa os campos e zera contadores
+            txtPontos.Clear();
+            txtErros.Clear();
+            txtDicaExibida.Clear();
+            rbComDica.Checked = false;
+            tempo = 0;
+            txtTempoRestante.Clear();
+            qtdErros = 0;
+            qtdAcertos = 0;
+
+            // Desabilita todos os botões do teclado
+            foreach (Control ctrl in tabForca.Controls)
+            {
+                if (ctrl is Button btn && btn.Tag != null && btn.Tag.ToString().Length == 1)
+                {
+                    btn.Enabled = false;
+                }
+            }
+
+            // Limpa a palavra da forca
+            dgvPalavraForca.Columns.Clear();
+            dgvPalavraForca.Rows.Clear();
+
+            // Deixa só a estrutura da forca visível (supondo pbForca1, pbForca2, ..., pbForca6)
+            /*foreach (Control ctrl in tabForca.Controls)
+            {
+                if (ctrl is PictureBox pb)
+                {
+                    // Se for a estrutura da forca, mantém visível
+                    if (pb.Name.StartsWith("pbForca"))
+                        pb.Visible = true;
+                    else
+                        pb.Visible = false;
+                }
+            }*/
+
+            restaurarCenarioInicial();
+
+            // libera a aba de cadastro de volta
+            if (!tabControl1.TabPages.Contains(tabCadastro)) { 
+                tabControl1.TabPages.Add(tabCadastro);
+            }
+
+            // desabilita o btnPararJogo novamente
+            btnPararJogo.Enabled = false;
+
         }
     }
 }

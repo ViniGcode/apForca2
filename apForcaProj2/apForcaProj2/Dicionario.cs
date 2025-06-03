@@ -123,6 +123,18 @@ using System.Threading.Tasks;
         return qtdeAcertos;
     }
 
+    // método que conta quantas letras são válidas, desconsiderando hifens e espaços
+    // assim, facilita saber qual o número de letras devem ser adivinhadas para dar vitória ao usuário
+    public int QuantidadeLetrasValidas()
+    {
+        int contador = 0;
+        foreach (char c in Palavra)
+        {
+            if (c != ' ' && c != '-')
+                contador++;
+        }
+        return contador;
+    }
 
     public int CompareTo(Dicionario outra)
         {
