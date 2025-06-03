@@ -98,29 +98,33 @@ using System.Threading.Tasks;
             return Palavra + Dica;
         }
 
-        // método para verificar se a letra existe na palavra e marcar as posições certas
-        // ao acertar, o vetor acertou altera para true a posição da letra adivinhada
+    // método para verificar se a letra existe na palavra e marcar as posições certas
+    // ao acertar, o vetor acertou altera para true a posição da letra adivinhada
 
-        // ex.: ao acertar a letra "O" da palavra COMPUTADOR, o vetor acertou, por acertar as posições acertou[1] e acertou[8], passaria a ser:
+    // ex.: ao acertar a letra "O" da palavra COMPUTADOR, o vetor acertou, por acertar as posições acertou[1] e acertou[8], passaria a ser:
 
-        //  c     o     m     p     u     t     a     d    o    r
-        // [false true false false false false false false true false false false false false false]
-        //   0      1    2     3     4     5     6     7     8     9   10    11    12    13     14
-        public bool VerificarLetra(char letra)
+    //  c     o     m     p     u     t     a     d    o    r
+    // [false true false false false false false false true false false false false false false]
+    //   0      1    2     3     4     5     6     7     8     9   10    11    12    13     14
+    public int VerificarLetra(char letra, out bool[] acertos)
+    {
+        int qtdeAcertos = 0;
+        acertos = new bool[Palavra.Length];
+
+        for (int i = 0; i < Palavra.Length; i++)
         {
-            bool encontrou = false;
-            for (int i = 0; i < tamanhoPalavra; i++)
+            if (char.ToUpper(Palavra[i]) == char.ToUpper(letra))
             {
-                if (Palavra[i] == letra)
-                {
-                    acertou[i] = true;
-                    encontrou = true;
-                }
+                acertos[i] = true;
+                qtdeAcertos++;
             }
-            return encontrou;
         }
 
-        public int CompareTo(Dicionario outra)
+        return qtdeAcertos;
+    }
+
+
+    public int CompareTo(Dicionario outra)
         {
             return this.Palavra.CompareTo(outra.Palavra);
         }

@@ -22,14 +22,15 @@ namespace apForcaProj2
         int tempo;
         private Random random = new Random(); // sorteador
         private Dicionario palavraSorteada;
+        private int qtdErros = 0; // contagem de erros
+        private int qtdAcertos = 0; // contagem de acertos
+        private bool aguardandoNome = true; 
 
         // array para facilitar as atribuições de cada tag e dos clicks de cada btn
         private string[] teclado = new string[] { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
                                                   "A", "S", "D", "F", "G", "H", "J", "K", "L", "Ç",
                                                   "Z", "X", "C", "V", "B", "N", "M" };
 
-        private int qtdErros = 0; // contagem de erros
-        private int qtdAcertos = 0; // contagem de acertos
 
 
         public FrmForca()
@@ -97,6 +98,10 @@ namespace apForcaProj2
             ExibirRegistroAtual();
             ExibirDadosNoDataGridView(listaDicionario, dgDicionario, Direcao.paraFrente);
 
+            btnIniciarJogo.Enabled = false; // só habilita após aguardandoNome = false
+            aguardandoNome = true;
+
+            // letras do teclado
             for (int i = 0; i < teclado.Length; i++)
             {
                 Button btn = this.Controls.Find("btn" + teclado[i], true).FirstOrDefault() as Button;
@@ -106,6 +111,7 @@ namespace apForcaProj2
                     btn.Click += btnLetra_Click;
                 }
             }
+
         }
 
         // método de para salvar o arquivo .txt ao fechar o formulário 
@@ -271,14 +277,15 @@ namespace apForcaProj2
 
         private void btnIniciarJogo_Click(object sender, EventArgs e)
         {
-            // verifica se a lista está vazia, se estiver, retorna e impossibilita o jogo
+            // verifica se a lista está vazia
+            // se estiver, retorna e impossibilita o jogo
             // oculta a aba de cadastro para o jogador não trapacear
             // sorteia uma palavra a partir da listagem crescente do dicionario
             // configura o DataGridView limpando linhas e colunas anteriores
             // adiciona uma coluna para cada letra da palavra 
             // adiciona linha com traços (_)
             // se houver espaço ou hífen, mantém o caractere original
-            // habilita todos os botões com tag ==> os do teclado
+            // habilita novamente todos os botões que possuem tag (os botões do teclado)
             // de modo que evita que continuem desabilitados devido a jogos anteriores
             // limpa a dica exibida, a contagem de erros, acertos e desmarca o rbComDica
             // inicia contagem do tempo e estipula para 90s
@@ -372,7 +379,9 @@ namespace apForcaProj2
         private void btnLetra_Click(object sender, EventArgs e)
         {
             // obtém o botão clicado e a letra correspondente
-            // desativa o botão clicado para evitar clique repetido
+            // inicialmente será utilizado para preencher o nome do usuário em txtSeuNome
+            // após o envio do nome, aguardandoNome passa a ser false, o que permite o início do jogo
+            // durante o jogo, os botões clicados são desativados para evitar clique repetido
             // chama o método da palavra sorteada e atualiza o vetor de acertos e retorna se a letra existe
             // se a letra foi encontrada, atualiza as posições do DataGridView baseadas no vetor de acertos
             // se errou, incrementa o qtdErros e atualiza txtErros
@@ -381,17 +390,72 @@ namespace apForcaProj2
             Button btnClicado = sender as Button;
             string letra = btnClicado.Tag.ToString();
 
-            btnClicado.Enabled = false;
-
-            bool letraEncontrada = false;
-
-            for (int i = 0; i < palavraSorteada.Palavra.Length; i++)
+            if (aguardandoNome)
             {
-                if (palavraSorteada.Palavra[i].ToString().ToUpper() == letra)
+                txtSeuNome.Text += letra;
+            }
+            else
+            {
+                btnClicado.Enabled = false;
+
+                // usa método VerificarLetra do Dicionario
+                bool[] acertos;
+                int qtdeAcertosNaPalavra = palavraSorteada.VerificarLetra(letra[0], out acertos);
+
+                if (qtdeAcertosNaPalavra > 0)
                 {
-                    dgvPalavraForca.Rows[0].Cells[i].Value = letra;
-                    letraEncontrada = true;
+                    qtdAcertos += qtdeAcertosNaPalavra;
+                    txtPontos.Text = qtdAcertos.ToString();
+
+                    for (int i = 0; i < acertos.Length; i++)
+                    {
+                        if (acertos[i])
+                        {
+                            dgvPalavraForca.Rows[0].Cells[i].Value = letra;
+                        }
+                    }
                 }
+                else
+                {
+                    qtdErros++;
+                    txtErros.Text = qtdErros.ToString();
+                }
+            }
+        }
+
+        // método que permite o usuário corrigir o nome caso escreva errado
+        // verifica se o nome ainda não foi enviado e se o txtSeuNome já possui algum caracter
+        private void btnBackSpace_Click(object sender, EventArgs e)
+        {
+            if (aguardandoNome && txtSeuNome.Text.Length > 0)
+            {
+                txtSeuNome.Text = txtSeuNome.Text.Substring(0, txtSeuNome.Text.Length - 1);
+            }
+        }
+
+        // método para enviar o nome do usuário e habilitar o btnIniciarJogo
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            if (aguardandoNome)
+            {
+                if (string.IsNullOrWhiteSpace(txtSeuNome.Text))
+                {
+                    MessageBox.Show("Digite seu nome antes de continuar.");
+                    return;
+                }
+
+                aguardandoNome = false;
+                btnIniciarJogo.Enabled = true;
+                MessageBox.Show($"Bem-vindo, {txtSeuNome.Text.Trim()}! Agora você pode começar o jogo.");
+            }
+        }
+         // método para a barra de espaço (" ")
+         // verifica se o jogo ainda está aguardando o envio do nome do usuário para possibilitar o uso da barra
+        private void btnSpaceBar_Click(object sender, EventArgs e)
+        {
+            if (aguardandoNome)
+            {
+                txtSeuNome.Text += " ";
             }
         }
     }
