@@ -180,8 +180,15 @@ namespace apForcaProj2
         {
             // Retroceder o ponteiro atual para o nó imediatamente anterior 
             // Exibir o Registro Atual;
-            listaDicionario.Retroceder();
-            ExibirRegistroAtual();
+            if (!listaDicionario.EstaVazia && listaDicionario.Atual != null)
+            {
+                listaDicionario.Retroceder();
+                ExibirRegistroAtual();
+            }
+            else
+            {
+                MessageBox.Show("Não há registro anterior.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnProximo_Click(object sender, EventArgs e)
@@ -230,7 +237,9 @@ namespace apForcaProj2
             {
                 Dicionario atual = listaDicionario.Atual.Info;
                 atual.Dica = txtDica.Text;
+                listaDicionario.Atual.Info = atual; // atualiza o nó atual com a nova dica
                 ExibirRegistroAtual();
+                ExibirDadosNoDataGridView(listaDicionario, dgDicionario, Direcao.paraFrente);
             }
             else
             {
@@ -246,13 +255,49 @@ namespace apForcaProj2
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            // verifica se o campo txtPalavra está preenchido
+            // se sim, busca a palavra na listaDicionario
+            // se não, exibe uma mensagem de aviso
+            if (!string.IsNullOrWhiteSpace(txtPalavra.Text))
+            {
+                string palavraBusca = txtPalavra.Text.Trim();
+                // busca ignorando maiúsculas/minúsculas e espaços extras
+                var lista = listaDicionario.Listagem(Direcao.paraFrente);
+                int indice = lista.FindIndex(d =>
+                    string.Equals(d.Palavra.Trim(), palavraBusca, StringComparison.OrdinalIgnoreCase)
+                );
+                if (indice >= 0)
+                {
+                    listaDicionario.PosicionarEm(indice);
+                    ExibirRegistroAtual();
+                }
+                else
+                {
+                    MessageBox.Show("Palavra não encontrada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite uma palavra para buscar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            if (!listaDicionario.EstaVazia && listaDicionario.Atual != null)
+            {
+                // remove o nó atual da listaDicionario
+                listaDicionario.Remover(listaDicionario.Atual.Info);
+                ExibirRegistroAtual();
+                ExibirDadosNoDataGridView(listaDicionario, dgDicionario, Direcao.paraFrente);
+            }
+            else
+            {
+                MessageBox.Show("Nenhum registro selecionado para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {

@@ -54,6 +54,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.tabForca = new System.Windows.Forms.TabPage();
+            this.btnPararJogo = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnBackSpace = new System.Windows.Forms.Button();
             this.btnSpaceBar = new System.Windows.Forms.Button();
@@ -124,7 +125,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.slRegistro = new System.Windows.Forms.ToolStripStatusLabel();
             this.timerTempoRestante = new System.Windows.Forms.Timer(this.components);
-            this.btnPararJogo = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDicionario)).BeginInit();
@@ -159,11 +159,11 @@
             this.tabControl1.Controls.Add(this.tabCadastro);
             this.tabControl1.Controls.Add(this.tabForca);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(9, 10);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(890, 487);
+            this.tabControl1.Size = new System.Drawing.Size(1187, 599);
             this.tabControl1.TabIndex = 0;
             // 
             // tabCadastro
@@ -175,11 +175,11 @@
             this.tabCadastro.Controls.Add(this.lblPalavra);
             this.tabCadastro.Controls.Add(this.lblDica);
             this.tabCadastro.Controls.Add(this.tsCadastro);
-            this.tabCadastro.Location = new System.Drawing.Point(4, 25);
-            this.tabCadastro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabCadastro.Location = new System.Drawing.Point(4, 29);
+            this.tabCadastro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabCadastro.Name = "tabCadastro";
-            this.tabCadastro.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabCadastro.Size = new System.Drawing.Size(882, 458);
+            this.tabCadastro.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabCadastro.Size = new System.Drawing.Size(1179, 566);
             this.tabCadastro.TabIndex = 0;
             this.tabCadastro.Text = "Cadastro";
             // 
@@ -189,10 +189,11 @@
             this.dgDicionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cPalavras,
             this.cDicas});
-            this.dgDicionario.Location = new System.Drawing.Point(8, 135);
+            this.dgDicionario.Location = new System.Drawing.Point(11, 166);
+            this.dgDicionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgDicionario.Name = "dgDicionario";
             this.dgDicionario.RowHeadersWidth = 51;
-            this.dgDicionario.Size = new System.Drawing.Size(561, 177);
+            this.dgDicionario.Size = new System.Drawing.Size(748, 218);
             this.dgDicionario.TabIndex = 27;
             // 
             // cPalavras
@@ -211,33 +212,37 @@
             // 
             // txtDica
             // 
-            this.txtDica.Location = new System.Drawing.Point(84, 96);
+            this.txtDica.Location = new System.Drawing.Point(112, 118);
+            this.txtDica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDica.Name = "txtDica";
-            this.txtDica.Size = new System.Drawing.Size(362, 23);
+            this.txtDica.Size = new System.Drawing.Size(481, 26);
             this.txtDica.TabIndex = 26;
             // 
             // txtPalavra
             // 
-            this.txtPalavra.Location = new System.Drawing.Point(84, 63);
+            this.txtPalavra.Location = new System.Drawing.Point(112, 78);
+            this.txtPalavra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPalavra.Name = "txtPalavra";
-            this.txtPalavra.Size = new System.Drawing.Size(174, 23);
+            this.txtPalavra.Size = new System.Drawing.Size(231, 26);
             this.txtPalavra.TabIndex = 25;
             // 
             // lblPalavra
             // 
             this.lblPalavra.AutoSize = true;
-            this.lblPalavra.Location = new System.Drawing.Point(5, 63);
+            this.lblPalavra.Location = new System.Drawing.Point(7, 78);
+            this.lblPalavra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPalavra.Name = "lblPalavra";
-            this.lblPalavra.Size = new System.Drawing.Size(60, 17);
+            this.lblPalavra.Size = new System.Drawing.Size(70, 20);
             this.lblPalavra.TabIndex = 24;
             this.lblPalavra.Text = "Palavra:";
             // 
             // lblDica
             // 
             this.lblDica.AutoSize = true;
-            this.lblDica.Location = new System.Drawing.Point(5, 96);
+            this.lblDica.Location = new System.Drawing.Point(7, 118);
+            this.lblDica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDica.Name = "lblDica";
-            this.lblDica.Size = new System.Drawing.Size(40, 17);
+            this.lblDica.Size = new System.Drawing.Size(49, 20);
             this.lblDica.TabIndex = 23;
             this.lblDica.Text = "Dica:";
             // 
@@ -258,9 +263,9 @@
             this.btnExcluir,
             this.toolStripSeparator2,
             this.btnSair});
-            this.tsCadastro.Location = new System.Drawing.Point(2, 2);
+            this.tsCadastro.Location = new System.Drawing.Point(3, 2);
             this.tsCadastro.Name = "tsCadastro";
-            this.tsCadastro.Size = new System.Drawing.Size(878, 42);
+            this.tsCadastro.Size = new System.Drawing.Size(1173, 47);
             this.tsCadastro.TabIndex = 22;
             this.tsCadastro.Text = "toolStrip1";
             // 
@@ -269,7 +274,7 @@
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(40, 39);
+            this.btnInicio.Size = new System.Drawing.Size(49, 44);
             this.btnInicio.Text = "Início";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -279,7 +284,7 @@
             this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
             this.btnAnterior.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(54, 39);
+            this.btnAnterior.Size = new System.Drawing.Size(67, 44);
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
@@ -289,7 +294,7 @@
             this.btnProximo.Image = ((System.Drawing.Image)(resources.GetObject("btnProximo.Image")));
             this.btnProximo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnProximo.Name = "btnProximo";
-            this.btnProximo.Size = new System.Drawing.Size(55, 39);
+            this.btnProximo.Size = new System.Drawing.Size(68, 44);
             this.btnProximo.Text = "Próximo";
             this.btnProximo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProximo.Click += new System.EventHandler(this.btnProximo_Click);
@@ -299,7 +304,7 @@
             this.btnFim.Image = ((System.Drawing.Image)(resources.GetObject("btnFim.Image")));
             this.btnFim.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFim.Name = "btnFim";
-            this.btnFim.Size = new System.Drawing.Size(36, 39);
+            this.btnFim.Size = new System.Drawing.Size(44, 44);
             this.btnFim.Text = "Final";
             this.btnFim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFim.Click += new System.EventHandler(this.btnFim_Click);
@@ -307,7 +312,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 42);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 47);
             // 
             // btnBuscar
             // 
@@ -315,21 +320,21 @@
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(24, 39);
+            this.btnBuscar.Size = new System.Drawing.Size(29, 44);
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 42);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 47);
             // 
             // btnNovo
             // 
             this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
             this.btnNovo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(40, 39);
+            this.btnNovo.Size = new System.Drawing.Size(49, 44);
             this.btnNovo.Text = "Novo";
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -339,7 +344,7 @@
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(41, 39);
+            this.btnEditar.Size = new System.Drawing.Size(52, 44);
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -349,7 +354,7 @@
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(57, 39);
+            this.btnCancelar.Size = new System.Drawing.Size(70, 44);
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -359,7 +364,7 @@
             this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
             this.btnExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(45, 39);
+            this.btnExcluir.Size = new System.Drawing.Size(56, 44);
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -367,14 +372,14 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 42);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 47);
             // 
             // btnSair
             // 
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(30, 39);
+            this.btnSair.Size = new System.Drawing.Size(38, 44);
             this.btnSair.Text = "Sair";
             this.btnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -448,20 +453,34 @@
             this.tabForca.Controls.Add(this.pbForca5);
             this.tabForca.Controls.Add(this.pbForca4);
             this.tabForca.Controls.Add(this.pbForca1);
-            this.tabForca.Location = new System.Drawing.Point(4, 25);
-            this.tabForca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabForca.Location = new System.Drawing.Point(4, 29);
+            this.tabForca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabForca.Name = "tabForca";
-            this.tabForca.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabForca.Size = new System.Drawing.Size(882, 458);
+            this.tabForca.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabForca.Size = new System.Drawing.Size(1179, 566);
             this.tabForca.TabIndex = 1;
             this.tabForca.Text = "Forca";
             this.tabForca.UseVisualStyleBackColor = true;
             // 
+            // btnPararJogo
+            // 
+            this.btnPararJogo.BackColor = System.Drawing.Color.Red;
+            this.btnPararJogo.ForeColor = System.Drawing.Color.Black;
+            this.btnPararJogo.Location = new System.Drawing.Point(920, 500);
+            this.btnPararJogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPararJogo.Name = "btnPararJogo";
+            this.btnPararJogo.Size = new System.Drawing.Size(256, 58);
+            this.btnPararJogo.TabIndex = 68;
+            this.btnPararJogo.Text = "PARAR";
+            this.btnPararJogo.UseVisualStyleBackColor = false;
+            this.btnPararJogo.Click += new System.EventHandler(this.btnPararJogo_Click);
+            // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(817, 148);
+            this.btnEnter.Location = new System.Drawing.Point(1089, 182);
+            this.btnEnter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(62, 23);
+            this.btnEnter.Size = new System.Drawing.Size(83, 28);
             this.btnEnter.TabIndex = 67;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -469,9 +488,10 @@
             // 
             // btnBackSpace
             // 
-            this.btnBackSpace.Location = new System.Drawing.Point(817, 118);
+            this.btnBackSpace.Location = new System.Drawing.Point(1089, 145);
+            this.btnBackSpace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBackSpace.Name = "btnBackSpace";
-            this.btnBackSpace.Size = new System.Drawing.Size(62, 23);
+            this.btnBackSpace.Size = new System.Drawing.Size(83, 28);
             this.btnBackSpace.TabIndex = 66;
             this.btnBackSpace.Text = "Apagar";
             this.btnBackSpace.UseVisualStyleBackColor = true;
@@ -479,25 +499,29 @@
             // 
             // btnSpaceBar
             // 
-            this.btnSpaceBar.Location = new System.Drawing.Point(621, 206);
+            this.btnSpaceBar.Location = new System.Drawing.Point(828, 254);
+            this.btnSpaceBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSpaceBar.Name = "btnSpaceBar";
-            this.btnSpaceBar.Size = new System.Drawing.Size(110, 23);
+            this.btnSpaceBar.Size = new System.Drawing.Size(147, 28);
             this.btnSpaceBar.TabIndex = 65;
+            this.btnSpaceBar.Text = "__________";
             this.btnSpaceBar.UseVisualStyleBackColor = true;
             this.btnSpaceBar.Click += new System.EventHandler(this.btnSpaceBar_Click);
             // 
             // txtTempoRestante
             // 
             this.txtTempoRestante.ForeColor = System.Drawing.Color.Red;
-            this.txtTempoRestante.Location = new System.Drawing.Point(782, 374);
+            this.txtTempoRestante.Location = new System.Drawing.Point(1043, 460);
+            this.txtTempoRestante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTempoRestante.Name = "txtTempoRestante";
-            this.txtTempoRestante.Size = new System.Drawing.Size(46, 23);
+            this.txtTempoRestante.Size = new System.Drawing.Size(60, 26);
             this.txtTempoRestante.TabIndex = 64;
             // 
             // pbForca_2_07
             // 
             this.pbForca_2_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_07.Image")));
-            this.pbForca_2_07.Location = new System.Drawing.Point(69, 131);
+            this.pbForca_2_07.Location = new System.Drawing.Point(92, 161);
+            this.pbForca_2_07.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_2_07.Name = "pbForca_2_07";
             this.pbForca_2_07.Size = new System.Drawing.Size(57, 40);
             this.pbForca_2_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -508,7 +532,8 @@
             // pbForca_2_04
             // 
             this.pbForca_2_04.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_04.Image")));
-            this.pbForca_2_04.Location = new System.Drawing.Point(69, 47);
+            this.pbForca_2_04.Location = new System.Drawing.Point(92, 58);
+            this.pbForca_2_04.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_2_04.Name = "pbForca_2_04";
             this.pbForca_2_04.Size = new System.Drawing.Size(48, 94);
             this.pbForca_2_04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -519,9 +544,10 @@
             // pbForca_2_03
             // 
             this.pbForca_2_03.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_2_03.Image")));
-            this.pbForca_2_03.Location = new System.Drawing.Point(0, 50);
+            this.pbForca_2_03.Location = new System.Drawing.Point(0, 62);
+            this.pbForca_2_03.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_2_03.Name = "pbForca_2_03";
-            this.pbForca_2_03.Size = new System.Drawing.Size(69, 91);
+            this.pbForca_2_03.Size = new System.Drawing.Size(92, 112);
             this.pbForca_2_03.TabIndex = 61;
             this.pbForca_2_03.TabStop = false;
             this.pbForca_2_03.Visible = false;
@@ -529,7 +555,8 @@
             // pbEnforcado
             // 
             this.pbEnforcado.Image = ((System.Drawing.Image)(resources.GetObject("pbEnforcado.Image")));
-            this.pbEnforcado.Location = new System.Drawing.Point(299, 42);
+            this.pbEnforcado.Location = new System.Drawing.Point(399, 52);
+            this.pbEnforcado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbEnforcado.Name = "pbEnforcado";
             this.pbEnforcado.Size = new System.Drawing.Size(169, 337);
             this.pbEnforcado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -540,7 +567,8 @@
             // pbForca_14
             // 
             this.pbForca_14.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_14.Image")));
-            this.pbForca_14.Location = new System.Drawing.Point(123, 227);
+            this.pbForca_14.Location = new System.Drawing.Point(164, 279);
+            this.pbForca_14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_14.Name = "pbForca_14";
             this.pbForca_14.Size = new System.Drawing.Size(63, 50);
             this.pbForca_14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -551,7 +579,8 @@
             // pbForca_16
             // 
             this.pbForca_16.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_16.Image")));
-            this.pbForca_16.Location = new System.Drawing.Point(90, 274);
+            this.pbForca_16.Location = new System.Drawing.Point(120, 337);
+            this.pbForca_16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_16.Name = "pbForca_16";
             this.pbForca_16.Size = new System.Drawing.Size(68, 91);
             this.pbForca_16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -562,7 +591,8 @@
             // pbForca_17
             // 
             this.pbForca_17.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_17.Image")));
-            this.pbForca_17.Location = new System.Drawing.Point(157, 274);
+            this.pbForca_17.Location = new System.Drawing.Point(209, 337);
+            this.pbForca_17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_17.Name = "pbForca_17";
             this.pbForca_17.Size = new System.Drawing.Size(58, 91);
             this.pbForca_17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -573,7 +603,8 @@
             // pbForca_1_05
             // 
             this.pbForca_1_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_1_05.Image")));
-            this.pbForca_1_05.Location = new System.Drawing.Point(114, 45);
+            this.pbForca_1_05.Location = new System.Drawing.Point(152, 55);
+            this.pbForca_1_05.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_1_05.Name = "pbForca_1_05";
             this.pbForca_1_05.Size = new System.Drawing.Size(101, 94);
             this.pbForca_1_05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -584,9 +615,10 @@
             // pbForca_05
             // 
             this.pbForca_05.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_05.Image")));
-            this.pbForca_05.Location = new System.Drawing.Point(114, 45);
+            this.pbForca_05.Location = new System.Drawing.Point(152, 55);
+            this.pbForca_05.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_05.Name = "pbForca_05";
-            this.pbForca_05.Size = new System.Drawing.Size(109, 94);
+            this.pbForca_05.Size = new System.Drawing.Size(145, 116);
             this.pbForca_05.TabIndex = 55;
             this.pbForca_05.TabStop = false;
             this.pbForca_05.Visible = false;
@@ -594,7 +626,8 @@
             // pbForca_08
             // 
             this.pbForca_08.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_08.Image")));
-            this.pbForca_08.Location = new System.Drawing.Point(123, 136);
+            this.pbForca_08.Location = new System.Drawing.Point(164, 167);
+            this.pbForca_08.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_08.Name = "pbForca_08";
             this.pbForca_08.Size = new System.Drawing.Size(92, 16);
             this.pbForca_08.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -605,7 +638,8 @@
             // pbForca_09
             // 
             this.pbForca_09.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_09.Image")));
-            this.pbForca_09.Location = new System.Drawing.Point(123, 148);
+            this.pbForca_09.Location = new System.Drawing.Point(164, 182);
+            this.pbForca_09.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_09.Name = "pbForca_09";
             this.pbForca_09.Size = new System.Drawing.Size(63, 82);
             this.pbForca_09.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -616,7 +650,8 @@
             // pbForca_07
             // 
             this.pbForca_07.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_07.Image")));
-            this.pbForca_07.Location = new System.Drawing.Point(69, 131);
+            this.pbForca_07.Location = new System.Drawing.Point(92, 161);
+            this.pbForca_07.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_07.Name = "pbForca_07";
             this.pbForca_07.Size = new System.Drawing.Size(57, 40);
             this.pbForca_07.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -627,7 +662,8 @@
             // pbForca_10
             // 
             this.pbForca_10.Image = ((System.Drawing.Image)(resources.GetObject("pbForca_10.Image")));
-            this.pbForca_10.Location = new System.Drawing.Point(182, 147);
+            this.pbForca_10.Location = new System.Drawing.Point(243, 181);
+            this.pbForca_10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca_10.Name = "pbForca_10";
             this.pbForca_10.Size = new System.Drawing.Size(68, 58);
             this.pbForca_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -638,9 +674,10 @@
             // rbComDica
             // 
             this.rbComDica.AutoSize = true;
-            this.rbComDica.Location = new System.Drawing.Point(675, 338);
+            this.rbComDica.Location = new System.Drawing.Point(900, 416);
+            this.rbComDica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbComDica.Name = "rbComDica";
-            this.rbComDica.Size = new System.Drawing.Size(92, 21);
+            this.rbComDica.Size = new System.Drawing.Size(110, 24);
             this.rbComDica.TabIndex = 50;
             this.rbComDica.TabStop = true;
             this.rbComDica.Text = "Com dica?";
@@ -651,17 +688,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(834, 380);
+            this.label1.Location = new System.Drawing.Point(1112, 468);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.Size = new System.Drawing.Size(18, 20);
             this.label1.TabIndex = 49;
             this.label1.Text = "s";
             // 
             // btnIniciarJogo
             // 
-            this.btnIniciarJogo.Location = new System.Drawing.Point(496, 406);
+            this.btnIniciarJogo.Location = new System.Drawing.Point(661, 500);
+            this.btnIniciarJogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIniciarJogo.Name = "btnIniciarJogo";
-            this.btnIniciarJogo.Size = new System.Drawing.Size(192, 47);
+            this.btnIniciarJogo.Size = new System.Drawing.Size(256, 58);
             this.btnIniciarJogo.TabIndex = 48;
             this.btnIniciarJogo.Text = "INICIAR";
             this.btnIniciarJogo.UseVisualStyleBackColor = true;
@@ -670,34 +709,38 @@
             // txtErros
             // 
             this.txtErros.ForeColor = System.Drawing.Color.Red;
-            this.txtErros.Location = new System.Drawing.Point(545, 377);
+            this.txtErros.Location = new System.Drawing.Point(727, 464);
+            this.txtErros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtErros.Name = "txtErros";
-            this.txtErros.Size = new System.Drawing.Size(51, 23);
+            this.txtErros.Size = new System.Drawing.Size(67, 26);
             this.txtErros.TabIndex = 47;
             // 
             // txtPontos
             // 
             this.txtPontos.ForeColor = System.Drawing.Color.Green;
-            this.txtPontos.Location = new System.Drawing.Point(545, 339);
+            this.txtPontos.Location = new System.Drawing.Point(727, 417);
+            this.txtPontos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPontos.Name = "txtPontos";
-            this.txtPontos.Size = new System.Drawing.Size(51, 23);
+            this.txtPontos.Size = new System.Drawing.Size(67, 26);
             this.txtPontos.TabIndex = 45;
             // 
             // txtDicaExibida
             // 
             this.txtDicaExibida.ForeColor = System.Drawing.Color.Purple;
-            this.txtDicaExibida.Location = new System.Drawing.Point(546, 310);
+            this.txtDicaExibida.Location = new System.Drawing.Point(728, 382);
+            this.txtDicaExibida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDicaExibida.Name = "txtDicaExibida";
-            this.txtDicaExibida.Size = new System.Drawing.Size(313, 23);
+            this.txtDicaExibida.Size = new System.Drawing.Size(416, 26);
             this.txtDicaExibida.TabIndex = 44;
             // 
             // lblTempoRestante
             // 
             this.lblTempoRestante.AutoSize = true;
             this.lblTempoRestante.ForeColor = System.Drawing.Color.Red;
-            this.lblTempoRestante.Location = new System.Drawing.Point(672, 377);
+            this.lblTempoRestante.Location = new System.Drawing.Point(896, 464);
+            this.lblTempoRestante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTempoRestante.Name = "lblTempoRestante";
-            this.lblTempoRestante.Size = new System.Drawing.Size(112, 17);
+            this.lblTempoRestante.Size = new System.Drawing.Size(131, 20);
             this.lblTempoRestante.TabIndex = 43;
             this.lblTempoRestante.Text = "Tempo restante:";
             // 
@@ -705,9 +748,10 @@
             // 
             this.lblErros.AutoSize = true;
             this.lblErros.ForeColor = System.Drawing.Color.Red;
-            this.lblErros.Location = new System.Drawing.Point(494, 377);
+            this.lblErros.Location = new System.Drawing.Point(659, 464);
+            this.lblErros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErros.Name = "lblErros";
-            this.lblErros.Size = new System.Drawing.Size(46, 17);
+            this.lblErros.Size = new System.Drawing.Size(55, 20);
             this.lblErros.TabIndex = 41;
             this.lblErros.Text = "Erros:";
             // 
@@ -715,9 +759,10 @@
             // 
             this.lblPontos.AutoSize = true;
             this.lblPontos.ForeColor = System.Drawing.Color.Green;
-            this.lblPontos.Location = new System.Drawing.Point(493, 342);
+            this.lblPontos.Location = new System.Drawing.Point(657, 421);
+            this.lblPontos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPontos.Name = "lblPontos";
-            this.lblPontos.Size = new System.Drawing.Size(56, 17);
+            this.lblPontos.Size = new System.Drawing.Size(66, 20);
             this.lblPontos.TabIndex = 40;
             this.lblPontos.Text = "Pontos:";
             // 
@@ -725,277 +770,308 @@
             // 
             this.lblDicaForca.AutoSize = true;
             this.lblDicaForca.ForeColor = System.Drawing.Color.Purple;
-            this.lblDicaForca.Location = new System.Drawing.Point(494, 313);
+            this.lblDicaForca.Location = new System.Drawing.Point(659, 385);
+            this.lblDicaForca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDicaForca.Name = "lblDicaForca";
-            this.lblDicaForca.Size = new System.Drawing.Size(40, 17);
+            this.lblDicaForca.Size = new System.Drawing.Size(49, 20);
             this.lblDicaForca.TabIndex = 39;
             this.lblDicaForca.Text = "Dica:";
             // 
             // dgvPalavraForca
             // 
             this.dgvPalavraForca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPalavraForca.Location = new System.Drawing.Point(497, 235);
+            this.dgvPalavraForca.Location = new System.Drawing.Point(663, 289);
+            this.dgvPalavraForca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPalavraForca.Name = "dgvPalavraForca";
             this.dgvPalavraForca.RowHeadersWidth = 51;
-            this.dgvPalavraForca.Size = new System.Drawing.Size(363, 68);
+            this.dgvPalavraForca.Size = new System.Drawing.Size(484, 84);
             this.dgvPalavraForca.TabIndex = 38;
             // 
             // btnM
             // 
-            this.btnM.Location = new System.Drawing.Point(736, 177);
+            this.btnM.Location = new System.Drawing.Point(981, 218);
+            this.btnM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(31, 23);
+            this.btnM.Size = new System.Drawing.Size(41, 28);
             this.btnM.TabIndex = 37;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = true;
             // 
             // btnN
             // 
-            this.btnN.Location = new System.Drawing.Point(709, 177);
+            this.btnN.Location = new System.Drawing.Point(945, 218);
+            this.btnN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(31, 23);
+            this.btnN.Size = new System.Drawing.Size(41, 28);
             this.btnN.TabIndex = 36;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = true;
             // 
             // btnB
             // 
-            this.btnB.Location = new System.Drawing.Point(682, 177);
+            this.btnB.Location = new System.Drawing.Point(909, 218);
+            this.btnB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(31, 23);
+            this.btnB.Size = new System.Drawing.Size(41, 28);
             this.btnB.TabIndex = 35;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = true;
             // 
             // btnV
             // 
-            this.btnV.Location = new System.Drawing.Point(657, 177);
+            this.btnV.Location = new System.Drawing.Point(876, 218);
+            this.btnV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(31, 23);
+            this.btnV.Size = new System.Drawing.Size(41, 28);
             this.btnV.TabIndex = 34;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = true;
             // 
             // btnC
             // 
-            this.btnC.Location = new System.Drawing.Point(630, 177);
+            this.btnC.Location = new System.Drawing.Point(840, 218);
+            this.btnC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(31, 23);
+            this.btnC.Size = new System.Drawing.Size(41, 28);
             this.btnC.TabIndex = 33;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
             // 
             // btnX
             // 
-            this.btnX.Location = new System.Drawing.Point(606, 177);
+            this.btnX.Location = new System.Drawing.Point(808, 218);
+            this.btnX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(31, 23);
+            this.btnX.Size = new System.Drawing.Size(41, 28);
             this.btnX.TabIndex = 32;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
             // 
             // btnZ
             // 
-            this.btnZ.Location = new System.Drawing.Point(582, 177);
+            this.btnZ.Location = new System.Drawing.Point(776, 218);
+            this.btnZ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(31, 23);
+            this.btnZ.Size = new System.Drawing.Size(41, 28);
             this.btnZ.TabIndex = 31;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = true;
             // 
             // btnÇ
             // 
-            this.btnÇ.Location = new System.Drawing.Point(780, 148);
+            this.btnÇ.Location = new System.Drawing.Point(1040, 182);
+            this.btnÇ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnÇ.Name = "btnÇ";
-            this.btnÇ.Size = new System.Drawing.Size(31, 23);
+            this.btnÇ.Size = new System.Drawing.Size(41, 28);
             this.btnÇ.TabIndex = 30;
             this.btnÇ.Text = "Ç";
             this.btnÇ.UseVisualStyleBackColor = true;
             // 
             // btnL
             // 
-            this.btnL.Location = new System.Drawing.Point(756, 148);
+            this.btnL.Location = new System.Drawing.Point(1008, 182);
+            this.btnL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(31, 23);
+            this.btnL.Size = new System.Drawing.Size(41, 28);
             this.btnL.TabIndex = 29;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = true;
             // 
             // btnK
             // 
-            this.btnK.Location = new System.Drawing.Point(728, 148);
+            this.btnK.Location = new System.Drawing.Point(971, 182);
+            this.btnK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(31, 23);
+            this.btnK.Size = new System.Drawing.Size(41, 28);
             this.btnK.TabIndex = 28;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = true;
             // 
             // btnJ
             // 
-            this.btnJ.Location = new System.Drawing.Point(700, 148);
+            this.btnJ.Location = new System.Drawing.Point(933, 182);
+            this.btnJ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(31, 23);
+            this.btnJ.Size = new System.Drawing.Size(41, 28);
             this.btnJ.TabIndex = 27;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = true;
             // 
             // btnH
             // 
-            this.btnH.Location = new System.Drawing.Point(673, 148);
+            this.btnH.Location = new System.Drawing.Point(897, 182);
+            this.btnH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(31, 23);
+            this.btnH.Size = new System.Drawing.Size(41, 28);
             this.btnH.TabIndex = 26;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = true;
             // 
             // btnG
             // 
-            this.btnG.Location = new System.Drawing.Point(646, 148);
+            this.btnG.Location = new System.Drawing.Point(861, 182);
+            this.btnG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(31, 23);
+            this.btnG.Size = new System.Drawing.Size(41, 28);
             this.btnG.TabIndex = 25;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = true;
             // 
             // btnF
             // 
-            this.btnF.Location = new System.Drawing.Point(621, 148);
+            this.btnF.Location = new System.Drawing.Point(828, 182);
+            this.btnF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(31, 23);
+            this.btnF.Size = new System.Drawing.Size(41, 28);
             this.btnF.TabIndex = 24;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = true;
             // 
             // btnD
             // 
-            this.btnD.Location = new System.Drawing.Point(594, 148);
+            this.btnD.Location = new System.Drawing.Point(792, 182);
+            this.btnD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(31, 23);
+            this.btnD.Size = new System.Drawing.Size(41, 28);
             this.btnD.TabIndex = 23;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = true;
             // 
             // btnS
             // 
-            this.btnS.Location = new System.Drawing.Point(570, 148);
+            this.btnS.Location = new System.Drawing.Point(760, 182);
+            this.btnS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(31, 23);
+            this.btnS.Size = new System.Drawing.Size(41, 28);
             this.btnS.TabIndex = 22;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = true;
             // 
             // btnA
             // 
-            this.btnA.Location = new System.Drawing.Point(546, 148);
+            this.btnA.Location = new System.Drawing.Point(728, 182);
+            this.btnA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(31, 23);
+            this.btnA.Size = new System.Drawing.Size(41, 28);
             this.btnA.TabIndex = 21;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = true;
             // 
             // btnP
             // 
-            this.btnP.Location = new System.Drawing.Point(780, 119);
+            this.btnP.Location = new System.Drawing.Point(1040, 146);
+            this.btnP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(31, 23);
+            this.btnP.Size = new System.Drawing.Size(41, 28);
             this.btnP.TabIndex = 20;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = true;
             // 
             // btnO
             // 
-            this.btnO.Location = new System.Drawing.Point(756, 119);
+            this.btnO.Location = new System.Drawing.Point(1008, 146);
+            this.btnO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(31, 23);
+            this.btnO.Size = new System.Drawing.Size(41, 28);
             this.btnO.TabIndex = 19;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = true;
             // 
             // btnI
             // 
-            this.btnI.Location = new System.Drawing.Point(728, 119);
+            this.btnI.Location = new System.Drawing.Point(971, 146);
+            this.btnI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(31, 23);
+            this.btnI.Size = new System.Drawing.Size(41, 28);
             this.btnI.TabIndex = 18;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = true;
             // 
             // btnU
             // 
-            this.btnU.Location = new System.Drawing.Point(700, 119);
+            this.btnU.Location = new System.Drawing.Point(933, 146);
+            this.btnU.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(31, 23);
+            this.btnU.Size = new System.Drawing.Size(41, 28);
             this.btnU.TabIndex = 17;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = true;
             // 
             // btnY
             // 
-            this.btnY.Location = new System.Drawing.Point(673, 119);
+            this.btnY.Location = new System.Drawing.Point(897, 146);
+            this.btnY.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(31, 23);
+            this.btnY.Size = new System.Drawing.Size(41, 28);
             this.btnY.TabIndex = 16;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = true;
             // 
             // btnT
             // 
-            this.btnT.Location = new System.Drawing.Point(646, 119);
+            this.btnT.Location = new System.Drawing.Point(861, 146);
+            this.btnT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(31, 23);
+            this.btnT.Size = new System.Drawing.Size(41, 28);
             this.btnT.TabIndex = 15;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = true;
             // 
             // btnR
             // 
-            this.btnR.Location = new System.Drawing.Point(621, 119);
+            this.btnR.Location = new System.Drawing.Point(828, 146);
+            this.btnR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(31, 23);
+            this.btnR.Size = new System.Drawing.Size(41, 28);
             this.btnR.TabIndex = 14;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = true;
             // 
             // btnE
             // 
-            this.btnE.Location = new System.Drawing.Point(594, 119);
+            this.btnE.Location = new System.Drawing.Point(792, 146);
+            this.btnE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(31, 23);
+            this.btnE.Size = new System.Drawing.Size(41, 28);
             this.btnE.TabIndex = 13;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = true;
             // 
             // btnW
             // 
-            this.btnW.Location = new System.Drawing.Point(570, 119);
+            this.btnW.Location = new System.Drawing.Point(760, 146);
+            this.btnW.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(31, 23);
+            this.btnW.Size = new System.Drawing.Size(41, 28);
             this.btnW.TabIndex = 12;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
             // 
             // btnQ
             // 
-            this.btnQ.Location = new System.Drawing.Point(546, 119);
+            this.btnQ.Location = new System.Drawing.Point(728, 146);
+            this.btnQ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(31, 23);
+            this.btnQ.Size = new System.Drawing.Size(41, 28);
             this.btnQ.TabIndex = 11;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = true;
             // 
             // txtSeuNome
             // 
-            this.txtSeuNome.Location = new System.Drawing.Point(584, 81);
+            this.txtSeuNome.Location = new System.Drawing.Point(779, 100);
+            this.txtSeuNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSeuNome.Name = "txtSeuNome";
-            this.txtSeuNome.Size = new System.Drawing.Size(265, 23);
+            this.txtSeuNome.Size = new System.Drawing.Size(352, 26);
             this.txtSeuNome.TabIndex = 10;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(493, 81);
+            this.lblNome.Location = new System.Drawing.Point(657, 100);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(76, 17);
+            this.lblNome.Size = new System.Drawing.Size(89, 20);
             this.lblNome.TabIndex = 9;
             this.lblNome.Text = "Seu nome:";
             // 
@@ -1004,9 +1080,10 @@
             this.lblAdivinhe.AutoSize = true;
             this.lblAdivinhe.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdivinhe.ForeColor = System.Drawing.Color.Blue;
-            this.lblAdivinhe.Location = new System.Drawing.Point(580, 50);
+            this.lblAdivinhe.Location = new System.Drawing.Point(773, 62);
+            this.lblAdivinhe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdivinhe.Name = "lblAdivinhe";
-            this.lblAdivinhe.Size = new System.Drawing.Size(214, 29);
+            this.lblAdivinhe.Size = new System.Drawing.Size(269, 36);
             this.lblAdivinhe.TabIndex = 8;
             this.lblAdivinhe.Text = "Adivinhe a palavra!";
             // 
@@ -1015,36 +1092,40 @@
             this.lblForca.AutoSize = true;
             this.lblForca.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForca.ForeColor = System.Drawing.Color.Blue;
-            this.lblForca.Location = new System.Drawing.Point(624, 11);
+            this.lblForca.Location = new System.Drawing.Point(832, 14);
+            this.lblForca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblForca.Name = "lblForca";
-            this.lblForca.Size = new System.Drawing.Size(109, 37);
+            this.lblForca.Size = new System.Drawing.Size(134, 46);
             this.lblForca.TabIndex = 7;
             this.lblForca.Text = "Forca!";
             // 
             // pbForca3
             // 
             this.pbForca3.Image = ((System.Drawing.Image)(resources.GetObject("pbForca3.Image")));
-            this.pbForca3.Location = new System.Drawing.Point(0, 242);
+            this.pbForca3.Location = new System.Drawing.Point(0, 298);
+            this.pbForca3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca3.Name = "pbForca3";
-            this.pbForca3.Size = new System.Drawing.Size(100, 188);
+            this.pbForca3.Size = new System.Drawing.Size(133, 231);
             this.pbForca3.TabIndex = 6;
             this.pbForca3.TabStop = false;
             // 
             // pbForca7
             // 
             this.pbForca7.Image = ((System.Drawing.Image)(resources.GetObject("pbForca7.Image")));
-            this.pbForca7.Location = new System.Drawing.Point(123, 150);
+            this.pbForca7.Location = new System.Drawing.Point(164, 185);
+            this.pbForca7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca7.Name = "pbForca7";
-            this.pbForca7.Size = new System.Drawing.Size(100, 19);
+            this.pbForca7.Size = new System.Drawing.Size(133, 23);
             this.pbForca7.TabIndex = 5;
             this.pbForca7.TabStop = false;
             // 
             // pbForca6
             // 
             this.pbForca6.Image = ((System.Drawing.Image)(resources.GetObject("pbForca6.Image")));
-            this.pbForca6.Location = new System.Drawing.Point(123, 45);
+            this.pbForca6.Location = new System.Drawing.Point(164, 55);
+            this.pbForca6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca6.Name = "pbForca6";
-            this.pbForca6.Size = new System.Drawing.Size(83, 96);
+            this.pbForca6.Size = new System.Drawing.Size(111, 118);
             this.pbForca6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbForca6.TabIndex = 4;
             this.pbForca6.TabStop = false;
@@ -1052,27 +1133,30 @@
             // pbForca2
             // 
             this.pbForca2.Image = ((System.Drawing.Image)(resources.GetObject("pbForca2.Image")));
-            this.pbForca2.Location = new System.Drawing.Point(0, 55);
+            this.pbForca2.Location = new System.Drawing.Point(0, 68);
+            this.pbForca2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca2.Name = "pbForca2";
-            this.pbForca2.Size = new System.Drawing.Size(100, 194);
+            this.pbForca2.Size = new System.Drawing.Size(133, 239);
             this.pbForca2.TabIndex = 3;
             this.pbForca2.TabStop = false;
             // 
             // pbForca5
             // 
             this.pbForca5.Image = ((System.Drawing.Image)(resources.GetObject("pbForca5.Image")));
-            this.pbForca5.Location = new System.Drawing.Point(123, 136);
+            this.pbForca5.Location = new System.Drawing.Point(164, 167);
+            this.pbForca5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca5.Name = "pbForca5";
-            this.pbForca5.Size = new System.Drawing.Size(83, 33);
+            this.pbForca5.Size = new System.Drawing.Size(111, 41);
             this.pbForca5.TabIndex = 2;
             this.pbForca5.TabStop = false;
             // 
             // pbForca4
             // 
             this.pbForca4.Image = ((System.Drawing.Image)(resources.GetObject("pbForca4.Image")));
-            this.pbForca4.Location = new System.Drawing.Point(123, 2);
+            this.pbForca4.Location = new System.Drawing.Point(164, 2);
+            this.pbForca4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca4.Name = "pbForca4";
-            this.pbForca4.Size = new System.Drawing.Size(100, 50);
+            this.pbForca4.Size = new System.Drawing.Size(133, 62);
             this.pbForca4.TabIndex = 1;
             this.pbForca4.TabStop = false;
             // 
@@ -1080,9 +1164,10 @@
             // 
             this.pbForca1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbForca1.Image = ((System.Drawing.Image)(resources.GetObject("pbForca1.Image")));
-            this.pbForca1.Location = new System.Drawing.Point(2, 2);
+            this.pbForca1.Location = new System.Drawing.Point(3, 2);
+            this.pbForca1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbForca1.Name = "pbForca1";
-            this.pbForca1.Size = new System.Drawing.Size(878, 454);
+            this.pbForca1.Size = new System.Drawing.Size(1173, 562);
             this.pbForca1.TabIndex = 0;
             this.pbForca1.TabStop = false;
             // 
@@ -1092,48 +1177,37 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.slRegistro});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 499);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 615);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(910, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1213, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(85, 20);
             this.toolStripStatusLabel1.Text = "Mensagem:";
             // 
             // slRegistro
             // 
             this.slRegistro.Name = "slRegistro";
-            this.slRegistro.Size = new System.Drawing.Size(70, 17);
+            this.slRegistro.Size = new System.Drawing.Size(89, 20);
             this.slRegistro.Text = "Registro:0/0";
             // 
             // timerTempoRestante
             // 
             this.timerTempoRestante.Tick += new System.EventHandler(this.timerTempoRestante_Tick);
             // 
-            // btnPararJogo
-            // 
-            this.btnPararJogo.BackColor = System.Drawing.Color.Red;
-            this.btnPararJogo.ForeColor = System.Drawing.Color.Black;
-            this.btnPararJogo.Location = new System.Drawing.Point(690, 406);
-            this.btnPararJogo.Name = "btnPararJogo";
-            this.btnPararJogo.Size = new System.Drawing.Size(192, 47);
-            this.btnPararJogo.TabIndex = 68;
-            this.btnPararJogo.Text = "PARAR";
-            this.btnPararJogo.UseVisualStyleBackColor = false;
-            this.btnPararJogo.Click += new System.EventHandler(this.btnPararJogo_Click);
-            // 
             // FrmForca
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 521);
+            this.ClientSize = new System.Drawing.Size(1213, 641);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmForca";
             this.Text = "Forca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmForca_FormClosing);

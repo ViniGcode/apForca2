@@ -19,12 +19,14 @@ public class ListaDupla<Dado>
     public void PosicionarNoInicio()
     {
         atual = primeiro;
+        atual.Ant = null;
         numeroDoNoAtual = 0;
     }
 
     public void PosicionarNoFinal()
     {
         atual = ultimo;
+        atual.Prox = null;
         numeroDoNoAtual = quantosNos - 1;
     }
 
@@ -42,13 +44,16 @@ public class ListaDupla<Dado>
 
     public void Retroceder()
     {
+
         if (atual != null && atual.Ant != null)
         {
             atual = atual.Ant;
             numeroDoNoAtual--;
+
         }
-        else if (atual == primeiro)
+        else
         {
+
         }
     }
 
@@ -147,8 +152,11 @@ public class ListaDupla<Dado>
 
         if (EstaVazia)
             ultimo = novoNo;
-
-        novoNo.Prox = primeiro;
+        else
+        {
+            novoNo.Prox = primeiro;
+            primeiro.Ant = novoNo; // Corrige o ponteiro anterior do antigo primeiro nó
+        }
         primeiro = novoNo;
         quantosNos++;
     }
@@ -160,8 +168,10 @@ public class ListaDupla<Dado>
         if (EstaVazia)
             primeiro = novoNo;
         else
+        {
             ultimo.Prox = novoNo;
-
+            novoNo.Ant = ultimo; // Corrige o ponteiro anterior do novo nó
+        }
         ultimo = novoNo;
         quantosNos++;
     }
@@ -299,32 +309,49 @@ public class ListaDupla<Dado>
         if (EstaVazia)
             return false;
 
-        if (!Existe(dadoARemover))
-            return false;
-
-        if (atual == primeiro)
+        // Percorre a lista para encontrar o nó a ser removido
+        atual = primeiro;
+        while (atual != null && atual.Info.CompareTo(dadoARemover) != 0)
         {
-            primeiro = primeiro.Prox;
+            atual = atual.Prox;
+        }
+
+        if (atual == null)
+            return false; // Não encontrou
+
+        var noRemover = atual;
+
+        if (noRemover == primeiro)
+        {
+            primeiro = noRemover.Prox;
             if (primeiro != null)
                 primeiro.Ant = null;
             else
                 ultimo = null;
+            atual = primeiro;
         }
-        else if (atual == ultimo)
+        else if (noRemover == ultimo)
         {
-            ultimo = ultimo.Ant;
+            ultimo = noRemover.Ant;
             if (ultimo != null)
                 ultimo.Prox = null;
             else
                 primeiro = null;
+            atual = ultimo;
         }
         else
         {
-            atual.Ant.Prox = atual.Prox;
-            atual.Prox.Ant = atual.Ant;
+            if (noRemover.Ant != null)
+                noRemover.Ant.Prox = noRemover.Prox;
+            if (noRemover.Prox != null)
+                noRemover.Prox.Ant = noRemover.Ant;
+            atual = noRemover.Prox ?? noRemover.Ant;
         }
 
         quantosNos--;
+        if (quantosNos == 0)
+            atual = null;
+
         return true;
     }
 
